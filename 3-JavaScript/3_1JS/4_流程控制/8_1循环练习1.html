@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环练习 求和 sum函数</title>
+    <script>
+        // practices 1、求1 - 100的总和
+        // 创建两个变量用来保存初始变量和更新变量
+        // 方法1、while循环
+        let i = 0; sum = 0
+        while(i < 100){
+            i++
+            sum = sum +i
+            // console.log(i)
+        }
+        console.log(sum)
+
+        // 方法2、for循环
+        var sum = 0
+        for(let i = 1; i < 101; i++){
+            sum = sum +i
+        }
+        console.log(sum)
+
+        // practices 2、求100以内所有3的倍数，求它们的个数和总和
+        // 方法1、创建初始变量count保存3的个数，sum代表求和
+        let count = 0; sum = 0
+        for(let i = 0; i <= 100; i++){
+            // 获取3的倍数
+            if(i % 3 === 0){
+                count++
+                sum = sum + i 
+            }
+        }
+        console.log(`3的倍数个数总共有${count++}个,总和是${sum}`)
+
+        // 方法2、for循环直接取3的倍数
+        // let count = 0; sum = 0
+        // for(let i = 3; i <= 100; i+=3){
+        //     count++
+        //     sum += i
+        // }
+        // console.log(`3的倍数个数总共有${count++}个,总和是${sum}`)
+
+        // 方法3、while循环
+        // let i = 0; count = 0; sum = 0
+        // while(i < 100){
+        //     i++
+        //     if(i % 3 == 0){ 
+        //         count++
+        //         sum += i
+        //     }
+        // }
+        // console.log(`3的倍数个数总共有${count++}个,总和是${sum}`)
+
+        //方法四、同方法2，但是下面有错误
+        // let i = 0; count = 0; sum = 0
+        // while(i <= 100){
+        //     i = i + 3
+        //         count++
+        //         sum += i
+        //         console.log(i)
+        // }
+        // console.log(`3的倍数个数总共有${count++}个,总和是${sum}`)  
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

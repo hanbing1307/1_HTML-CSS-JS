@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环练习</title>
+    <script>
+        // 循环10次 我错了
+        /*
+        for(var i = 1; i <= 10; i++){
+            // console.log('我错了');
+            alert('我错了');
+        }
+        */
+
+        //循环100次你好
+        /*
+        for(var i = 1; i <= 100; i++){
+            console.log('你好')
+        }
+        */ 
+
+        /*
+        var num = prompt('请输入你想要循环的次数');
+        for(var i = 1; i <= num ;i++){
+            console.log('我错了')
+        }
+        */
+        // 循环输出今年这个人多少岁了
+        /*
+        for(var i = 1; i <= 100; i++){
+            console.log('今年这个人' + i + '岁了。')
+        }
+        */
+
+        /*
+        for(var i = 1; i <= 100; i++){
+            if(i == 1){
+                console.log('这个人今年1岁，他出生了。');
+            } else if(i == 100){
+                console.log('这个人今年100岁，他死了。');
+            } else{
+                console.log('今年这个人' + i + '岁了。');
+            }
+        }
+        */
+
+        //累加1-100
+        /*
+        var sum = 0;
+        for(var i = 1; i <= 100; i++){
+            // sum = sum +i;
+            sum += i;
+        }
+        console.log(sum);   //5050
+        */
+
+        // 求1-100之间所有整数的平均值
+        /*
+        var average;
+        var sum = 0;
+        for(var i = 1; i <= 100; i++){
+            sum += i;
+            average = sum / 100; 
+        }
+        console.log(average)   //50.5
+        */
+
+        //分别输出1-100里面偶数的和还有奇数的和 偶数 even 奇数 odd
+        /*
+        var even =0;
+        var odd = 0;
+        for(var i = 1; i <= 100; i++){
+            if(i % 2 == 0){
+                even += i;
+            } else{
+                odd += i;
+            }
+        }
+        console.log('1~100之间的偶数和是' + even);  //2550
+        console.log('1~100之间的奇数和是' + odd)    //2500
+        */
+
+        //求1-100之间能被3整除的数字之和
+        /*
+        var sum = 0;
+        for(var i = 1; i <= 100; i++){
+            if(i % 3 == 0){
+                sum += i;
+            }
+        }
+        console.log('1~100之间能被3整除的数字之和是' + sum) //1683
+        */
+
+        // 输入班级所有学生的成绩 存起来score 求班级总成绩sum ，平均成绩average
+        /*
+        var num = prompt('请输入班级总人数');
+        var sum = 0;
+        var average = 0;
+        for(var i = 1; i <= num; i++){
+            var score = prompt('请输入第'+ i +'个学生成绩');
+            sum = sum + parseFloat(score);
+        }
+        average = sum / num;
+        alert('班级总分是：' + sum);
+        alert('班级的平均分是：' + average);
+        */
+
+        //一行打印五颗心
+        /*
+        var str = '';
+        for(var i = 1; i <= 5; i++){
+            str += '❤';   
+        }
+        console.log(str);
+        */
+
+        //双重for循环
+        /*
+        for(var i = 1; i <= 5; i++){
+            console.log('这是外循环第' + i + '次');
+            for(var j = 1; j <= 5; j++){
+                console.log('这是里层循环第' + j + '次');
+            }
+        }
+        */
+
+        // 打印五行五列星星
+        /*
+        var str = '';
+        for(var i = 1; i <= 5; i++){
+            for(var j = 1; j <= 5; j++){
+                str = str + '⭐';  
+            }
+            str = str +'\n';
+        }
+        console.log(str);
+        */
+
+        //打印N行N列的星星
+        /*
+        var rows = prompt('请您输入行数：');
+        var cols = prompt('请您输入列数：');
+        var str = '';
+        for(var i = 1; i <= rows; i++){
+            for(var j = 1; j <= cols; j++){
+                str = str + '⭐';
+            }
+            str = str +'\n';
+        }
+        console.log(str)
+        */
+       
+        // 打印倒三角形 
+        /*
+        var str = '';
+        for(var i = 1; i <= 10; i++){
+            for(var j = i; j <= 10; j++){
+                str = str + '⭐';
+            }
+            str = str +'\n';
+        }
+        console.log(str)
+        */
+
+        //打印九九乘法表
+        var str = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                str += j + 'x' + i + '=' + i*j + '\t';
+            }
+            str = str + '\n';
+        }
+        console.log(str)
+    </script>
+</head>
+<body>  
+</body>
+</html>

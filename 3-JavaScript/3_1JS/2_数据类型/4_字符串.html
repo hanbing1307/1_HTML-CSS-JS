@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串String</title>
+    <script>
+        /* 
+            字符串（String）
+                - 在JS中使用单引号或者双引号表示字符串（常用单引号）
+                - 字符串嵌套：外双内单,外单内双
+                - 转义字符 \
+                    字符串转义
+                        转义符      说明
+                        \n          换行符，n是newline的意思
+                        \\          斜杠\
+                        \'          '单引号
+                        \"          "双引号
+                        \t          tab缩进
+                        \b          空格，b是blank的意思
+                - 字符串长度：用length可以获取
+                    var str = 'my name is andy';
+                    console.log(str.length);    //15
+                - 字符串拼接：用 + 号     数值相加，字符相连
+
+                - boolean、undefined、null
+                    · bool布尔值：True、False    参与四则运算时，true当作1，false当作0
+                    · 如果一个变量声明未赋值，就是undefined 未定义数据类型
+                    · 一个声明变量给null值，里面存的值为空
+                - 模板字符串
+                    - 使用反单引号` 表示目标你字符串
+                    - 模板字符串中可以嵌入变量
+                - 使用typeof检查字符串会返回"string"
+        */
+        let a = 'Hello';
+        a = '你好';
+        a = "这是一个'字符串'";
+        a = "这是一个\"字符串";
+        a = "这是一个\"\\\\字符串";
+        a = "这是一个\n'字符串'";
+        a = `今天天气真不错`;
+        a = `今天天气
+        真不错`;
+        console.log(a);
+
+        let name = '孙悟空';
+        name = '猪八戒';
+        let str = `你好，${name}`;
+        console.log(str);
+
+        let b = 10;
+        console.log(b);
+        console.log(`b = ${b}`);
+        console.log(typeof a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

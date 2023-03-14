@@ -1,0 +1,63 @@
+
+
+.box1{
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+    .box2{
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+        }
+    }
+    // 为box1设置一个hover（父元素）
+    &.hover{
+       background-color: orange;
+    }
+}
+
+
+//  extend 对当前选择器扩展指定选择器的样式（选择器分组）
+.box5:extend(.box1){
+    border: 10px solid red;
+}
+
+//mixin 混合 直接对指定样式进行引用，相当于复制
+.box6{
+    .box1();
+}
+
+//  使用类选择器可以在选择器后加一个括号，这样不会解析到css中，直接创建了一个mixin，可以被引用
+
+.box7(){
+    width: 200px;
+    height: 200px;
+    background-color: chocolate
+}
+.box8{
+    .box7();
+}
+
+//  混合函数 在混合函数中可以直接设置变量
+.test(@w,@h,@c){
+    width: @w;
+    height: @h;
+    border: 2px solid @c;
+}
+
+div{
+    .test(200px,300px,red);
+}
+
+// 调用混合函数时，按顺序传递参数
+
+body{
+    background-color: skyblue;
+}
+body:hover{
+    background-color: darken(skyblue,10%);
+}

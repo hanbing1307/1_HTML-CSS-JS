@@ -1,0 +1,38 @@
+// less的单行注释，注释中的内容不会解析到css中
+/*
+    多行注释，会解析到css中
+*/
+body{
+    div{
+        color: red;
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+    }
+    .box1{
+        border: 10px solid red;
+    }
+    .box3{
+        border: 10px solid green;
+    }
+}
+
+// 变量，再变量中可以存储一个任意的值
+// 并且在需要时，可以任意的修改变量中的值
+// 变量的语法，@变量名
+@a:400px;
+@b:box2;
+
+.box1{
+    // 使用变量，直接使用则以  @变量名  的形式使用即可
+    width: @a;
+}
+.box3{
+    width: @a;
+}
+// 作为类名，或者一部分值使用时，则必须以 .@{变量名} 的形式使用
+
+.@{b}{
+    width: @a;
+    background-color: blueviolet;
+}

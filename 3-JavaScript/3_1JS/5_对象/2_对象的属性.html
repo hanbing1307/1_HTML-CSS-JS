@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的属性</title>
+    <script>
+        /* 
+            对象的属性名：
+                - 通常属性名就是一个字符串，所以属性名可以是任何值
+                    但是如果属性名太特殊，不能直接使用，需要使用 [] 来设置
+                    虽然能用，但属性名还是按照标识符的规范命名
+
+                - 也可以使用符号(symbol)作为属性名
+                    获取这种属性时，也必须使用symbol
+                    使用symbol添加的属性，通常是那些不希望被外界访问的属性
+
+                - 使用[]去操作属性时，可以使用变量
+
+            属性值：
+                - 对象的属性值可以是任意数据类型，也可以是一个对象
+            
+            typeof 
+                - 使用typeof检查对象时返回object
+            in 运算符
+                用来检查对象中是否含有某个属性值
+                    有返回true，没有返回false
+        */
+        let obj = Object()
+        obj.name = "孙悟空"
+        obj.age = 18
+        // obj.gender = "男"
+        // obj.if = "嘻嘻"    // 不建议使用
+        // obj.let = "呜呜"   // 不建议使用
+        // obj[123] = "哈哈" // 不建议使用
+        // obj["34r#$%"] = "哇" // 不建议使用
+
+        // console.log(obj)
+        // console.log(obj.age)
+        // console.log(obj["age"])
+
+        let mySymbol = Symbol()
+        // 使用symbol作为属性名
+        obj[mySymbol] = "通过symbol添加的属性"
+        console.log(mySymbol)
+
+        let str = "address"
+        obj[str] = "花果山"  // 等价于obj["address"] = "花果山"
+        obj.str = "哈哈"  // 使用.的形式添加属性时，不能使用变量
+        console.log(obj)
+
+        obj.a = 123
+        obj.b = 'hello'
+        obj.c = true
+        obj.d = 123n
+        obj.e = NaN
+        obj.f = Object()
+        obj.f.name = "猪八戒"
+        obj.f.age = "500"
+        console.log(obj)
+        console.log(obj.f)
+        console.log(typeof(obj )) // object
+
+        
+        console.log("name" in obj)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

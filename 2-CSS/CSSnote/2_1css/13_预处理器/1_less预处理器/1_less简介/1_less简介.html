@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Less简介</title>
+    <style>
+        html{
+            /* css原生也支持变量的设置 */
+            --color:red;
+            --length:200px;
+        }
+        .box1{
+            width:calc(1000px/4);
+            height: 100px;
+            background-color: var(--color);
+        }
+        .box2{
+            width: var(--length);
+            height: 100px;
+            color: var(--color);
+        }
+        .box3{
+            width: var(--length);
+            height: 100px;
+            border: 10px solid var(--color);
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        Less （Leaner Style Sheets 的缩写） 是一门向后兼容的 CSS 扩展语言。
+            less是一门css的预处理语言
+
+            - css有一些缺点,一些特性浏览器不支持，不兼容
+            - less添加了许多新特性，例如对变量的支持，对mixin的支持等
+            - less的语法大体上和css一样，但新增加了许多扩展
+                所以浏览器不能直接执行less代码，需要先将less变成css格式，然后再执行
+                vscode需要插件easyless
+        
+     -->
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

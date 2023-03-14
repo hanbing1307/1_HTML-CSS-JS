@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list列表</title>
+</head>
+<body>
+<!-- 
+    list:列表
+        1、铅笔
+        2、尺子
+        3、橡皮
+    html中的list：三种：
+    1、有序列表：使用ol(ordered list)标签来创建。使用li表示列表项
+    2、无序列表：ul(unorded list)创建无序列表
+    3、定义列表:dl(define list)创建定义列表。使用dt表示定义内容，使用dd对内容进行解释说明
+
+        列表里面只能嵌套li标签，li标签可以嵌套其他标签
+    
+-->
+<ul>
+    <li>结构</li> 
+    <li>表现</li>
+    <li>行为</li>
+</ul>
+<ol>
+    <li>
+        <p>结构</p>
+    </li>
+    <li>表现</li>
+    <li>行为</li>
+</ol>
+<dl>
+    <dt>结构</dt>
+    <dd>结构表示网页的结构，结构用于规定网页中哪里是标题，哪里是段落</dd>
+</dl>
+<ul>
+    <li>
+        <ul>
+            ul可以嵌套
+        </ul>
+    </li>
+</ul>
+<!-- 
+    dl:表示自定义列表的整体，用于包裹dt/dd标签
+    dt:表示自定义列表的主题
+    dd:表示自定义列表的针对主题的每一项内容。 dd前会默认显示缩进效果
+    注意：
+        -dl标签中只允许包含dt、dd标签
+        -dt、dd标签可以包含任意内容
+ -->    
+    <dl>
+        <dt>帮助中心</dt>
+        <dd>账户中心</dd>
+        <dd>购物指南</dd>
+        <dd>订单操作</dd>
+    </dl>
+</body>
+</html>

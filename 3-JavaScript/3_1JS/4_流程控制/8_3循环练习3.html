@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            检查9是不是质数
+            质数：只能被1和它自己整除的数
+                1不是质数也不是合数
+        */
+         /* 思路： 检查9有没有除1和它自身以外的其他因数，
+                    如果有，说明9不是质数，
+                    如果没有说明是质数。
+                - 获取所有可能整除9的数： 2 3 4 5 6 7 8
+                - 检查这里面有没有能整除9的数
+        */     
+
+        // let flag = true // 利用布尔值或者计数器来检验
+        // // 获取所有有可能整除9的数
+        // for(let i = 2; i < 9; i++){
+        //     if(9 % i === 0){
+        //         // 如果9能被i整除，说明9一定不是质数
+        //         // 当循环执行时，如果从来没有进入过判断(判断代码没有执行)，则说明9是质数
+        //         // 如果判断哪怕只执行了一次，也说明9不是质数
+        //         flag = false
+        //     }
+        // }
+        // if(flag){
+        //     alert('9是质数')
+        // }else{
+        //     alert('9不是质数')
+        // }
+        /* 
+            获取用户输入的大于1的整数（暂时不考虑输错的情况）
+                然后编写代码检查这个数字是不是质数(素数)，并打印结果
+            质数：只能被1和它自己整除的数
+                1不是质数也不是合数
+        */
+        // 获取用户输入的值
+         let num = +prompt('请您输入一个大于1的整数')
+
+         // 用来记录num的状态，默认为true，num是质数
+         let flag = true
+         
+         for(let i = 2; i < num; i++){
+            if(num % i === 0){
+                flag = false
+            }
+         }
+         if(flag){
+            alert(`${num}是质数`)
+         }else{
+            alert(`${num}不是质数`)
+         }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

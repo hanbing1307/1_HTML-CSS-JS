@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 去除浏览器默认样式 -->
+    <link rel="stylesheet" href="./CSS Normalize.css">
+    <!-- 使用浮动，做导航栏 -->
+    <style>
+        /* 创建一个导航条的外部容器 */
+        /* 去除浏览器默认内外边距 */
+        .nav{
+            /* 设置导航条的宽高颜色,颜色根据实际开发需要设置 */
+            width: 640px;
+            height: 50px;
+            background-color: #ffc0cb;
+            /* 设置导航条上边距50px，居中 */
+            margin: 50px auto;
+        }
+
+        /* 去掉无序列表li的小圆点 */
+        ul{
+            list-style: none;
+        }
+
+        /* 设置li浮动，脱离文档流 */
+        .nav li{
+            float: left;
+        }
+
+        .nav li a{
+            /* 1、先float/display */
+            display: inline-block;
+            /* 2、设置li的宽高 */
+            width: 80px;
+            height: 50px;
+            /* background-color: green; */
+
+            /* 3、文字样式 */
+            /* 文字居中 */
+            text-align: center;
+            /* 高度居中 */
+            line-height: 50px;
+            /* 设置字体颜色 */
+            color: white;
+            /* 去除超链接的下划线 */
+            text-decoration: none;
+        }
+        /* 设置鼠标移入悬浮时的颜色 */
+        .nav li a:hover{
+            background-color:#008000;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <!-- 网站的主导航必须是li套a，提高浏览器的解析效率 -->
+        <ul>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">体育运动</a></li>
+            <li><a href="#">娱乐</a></li>
+            <li><a href="#">军事</a></li>
+            <li><a href="#">影视</a></li>
+            <li><a href="#">国际</a></li>
+            <li><a href="#">社会百态</a></li>
+            <li><a href="#">音乐</a></li>
+        </ul>
+    </div>
+</body>
+</html>

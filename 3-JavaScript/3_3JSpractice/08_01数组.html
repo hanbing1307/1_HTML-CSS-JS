@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组练习</title>
+    <script>
+        // 创建数组
+        var arr = new Array(); // 创建一个空的数组
+        var arr = []; // 创建一个空的数组
+
+        //访问数组
+        var arr = [1,2,3,'red'];
+        console.log(arr[2]) // 3
+
+        //遍历数组：通过循环
+        var arr = [1,2,3,'red'];
+        for(var i = 0; i < arr.length; i++){
+            console.log(arr[i]); //3
+        }
+        //计算数组的和及平均值
+        
+        var arr = [80,50,60,90];
+        var sum = 0;
+        var average = 0;
+        for(var i = 0; i < arr.length; i++){
+            sum = sum + arr[i];  
+        }
+        average = sum / arr.length;
+        console.log(sum,average); // 280,70
+        
+
+        // 输出数组最大值
+        var arr = [80,50,60,90];
+        var max = arr[0];
+        for(var i = 1; i < arr.length; i++){
+            if(max < arr[i]){
+                max = arr[i];
+            }
+        }
+        console.log(max);
+
+        //数组转换成字符串
+        var arr = [80,50,60,90];
+        var str = '';
+        var sep = '|';
+        for(var i = 0; i < arr.length; i++){
+            str = str + arr[i] + sep;
+        }
+        console.log(str);
+
+        //新增数组元素 ：不要给数组名赋值，否则会覆盖原本的数据
+        var arr = [80,50,60,90];
+        arr[4] = 'red';
+        console.log(arr); // [80, 50, 60, 90, 'red']
+        arr[5] = '123';
+        console.log(arr); // [80, 50, 60, 90, 'red', '123']
+        arr = '你好';
+        console.log(arr); // 你好
+
+        //数组自动添加数据量 练习，添加1-100的整数
+        var arr = [];
+        for (var i = 0; i < 100; i++){
+            arr[i] = i + 1;
+        }
+        console.log(arr);
+
+        //筛选数组 大于10的存入新数组
+        //方法一
+        
+        var arr = [1,2,3,85,15,46];
+        var newArr = [];
+        var j = 0;
+        for (var i = 1; i < arr.length; i++){
+            if(arr[i] > 10){
+                newArr[j] = arr[i];
+                j++;
+            }
+        }
+        console.log(newArr)
+        
+
+        //方法2
+        var arr = [1,2,3,85,15,46];
+        var newArr = [];
+        //刚开始，newArr.length就是0
+        for (var i = 1; i < arr.length; i++){
+            if(arr[i] > 10){
+                //新数组索引号应该从0开始，依次递增
+                newArr[newArr.length] = arr[i];
+            }
+        }
+        console.log(newArr)
+
+        //删除指定的数组元素（数组去重）
+        var arr = [1,2,3,85,15,46,0,85,153,85]; //去掉85
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++){
+            if(arr[i] != 85){
+                newArr[newArr.length] = arr[i];
+            }
+        }
+        console.log(newArr)
+
+        //翻转数组
+        var arr = [1,2,3,85,15,46];
+        var newArr = [];
+        for (var i = arr.length - 1; i >= 0; i--){
+            newArr[newArr.length] = arr[i];
+        }
+        console.log(newArr);
+
+        //冒泡排序
+        var arr = [5,4,3,2,1];
+        for (var i = 0; i <= arr.length - 1; i++){ // 外层循环管趟数
+            for (var j = 0; j <= arr.length - i - 1; j++){
+                //内部交换两个变量的值，前后比较
+                if (arr[j] > arr[j + 1]){
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东左侧导航栏</title>
+    <link rel="stylesheet" href="../CSS Normalize.css">
+    <style>
+        body{
+            /* 设置背景颜色方便查看，实际开发不需要 */
+            background-color: #bfa;
+        }
+        /* 设置菜单外部容器 */
+        .left-nav{
+            /* 设置宽度和高度 */
+            width: 190px;
+            height: 450px;
+            /* 设置内边距padding */
+            padding: 10px 0;
+            /* 设置背景颜色方便查看 */
+            background-color: #fefefe;
+            /* 让侧边栏不要偏向左侧，但不要贴近边缘 */
+            margin: 50px 100px;
+            /* 字体太大超过容器，需要设置字体大小 */
+            font-size: 12px;
+        }
+        
+        .left-nav .item{
+            height: 25px;
+            /* 要让文字在父元素中垂直居中，只需将父元素的line-height设置为一个和父元素height一样的值 */
+            line-height: 25px;
+            /* 让文字偏右，即左内边距 */
+            padding-left: 18px;
+        }
+
+        /* 为item设置鼠标悬停的状态 */
+        .item:hover{
+            background-color: rgb(196, 193, 193);
+        }
+
+        /* 设置超链接的样式 */
+        .item a{
+            /* 设置字体颜色 */
+            color: #333;
+            /* 设置字体大小 */
+            font-size: 14px;
+            /* 去除下划线 */
+            text-decoration: none;
+        }
+        .item span{
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建外部容器 nav div ul 都行 -->
+    <!--  menu：菜单 item：项目 -->
+    <nav class="left-nav">
+        <div class="item">
+            <a href="#">家用电器</a>
+        </div>
+
+        <div class="item">
+            <a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a>
+        </div>
+
+        <div class="item">
+            <a href="#">电脑</a><span>/</span><a href="#">办公</a>
+        </div>
+
+        <div class="item">
+            <a href="#">家居</a><span>/</span><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a>
+        </div>
+
+        <div class="item">
+            <a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a><span>/</span><a href="#">内衣</a>
+        </div>
+
+        <div class="item">
+            <a href="#">美妆</a><span>/</span><a href="#">个护清洁</a><span>/</span><a href="#">宠物</a>
+        </div>
+
+        <div class="item">
+            <a href="#">女鞋</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">钟表</a><span>/</span><a href="#">珠宝</a>
+        </div>
+
+        <div class="item">
+            <a href="#">男鞋</a><span>/</span><a href="#">运动</a><span>/</span><a href="#">户外</a>
+        </div>
+
+        <div class="item">
+            <a href="#">房产</a><span>/</span><a href="#">汽车</a><span>/</span><a href="#">汽车用品</a>
+        </div>
+
+        <div class="item">
+            <a href="#">母婴</a><span>/</span><a href="#">玩具乐器</a>
+        </div>
+
+        <div class="item">
+            <a href="#">食品</a><span>/</span><a href="#">酒类</a>/<a href="#">生鲜</a><span>/</span><a href="#">特产</a>
+        </div>
+
+        <div class="item">
+            <a href="#">艺术</a><span>/</span><a href="#">礼品鲜花</a><span>/</span><a href="#">农资绿植</a>
+        </div>
+
+        <div class="item">
+            <a href="#">医药保健</a><span>/</span><a href="#">计生情趣</a>
+        </div>
+
+        <div class="item">
+            <a href="#">图书</a><span>/</span><a href="#">文娱</a><span>/</span><a href="#">教育</a><span>/</span><a href="#">电子书</a>
+        </div>
+
+        <div class="item">
+            <a href="#">机票</a><span>/</span><a href="#">酒店</a><span>/</span><a href="#">旅游</a><span>/</span><a href="#">生活</a>
+        </div>
+
+        <div class="item">
+            <a href="#">众筹</a><span>/</span><a href="#">白条</a><span>/</span><a href="#">保险</a><span>/</span><a href="#">企业金融</a>
+        </div>
+
+        <div class="item">
+            <a href="#">安装</a><span>/</span><a href="#">维修</a><span>/</span><a href="#">清洗</a><span>/</span><a href="#">二手</a>
+        </div>
+
+        <div class="item">
+            <a href="#">工业品</a>
+        </div>
+    </nav>
+</body>
+</html>

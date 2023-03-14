@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if语句</title>
+    <script>
+        /* 
+            流程控制语句可以改变程序执行的顺序
+                常用三种结构：
+                    1、条件判断语句（顺序语句，顺序执行）
+                    2、条件分支语句（条件判断，条件执行）
+                    3、循环语句（循环执行）
+        */
+        /* 
+            if语句
+                - 语法：
+                    if(条件表达式){
+                        语句
+                    }
+                        
+                - 流程
+                    if语句在执行前会先对if后的条件表达式进行求值判断，
+                        如果结果为true，则执行if后的语句（紧随其后的一句或一个代码块{}）
+                        如果结果为false，则不执行
+                - 最佳实践：即使if后只有1行代码，我们也英国编写代码块，这样结构更加清晰
+
+                - 注意：
+                    如果if后的条件表达式不是布尔值，会转换为布尔值，然后再判断，再执行或不执行
+        */
+        // if(true)
+        //     alert("会挽雕弓如满月，望西北，射天狼。"); // 条件判断为true，执行
+        // if(false)
+        //     alert("会挽雕弓如满月，望西北，射天狼。"); //条件判断为false，不执行
+        
+        // let a = 10;
+        // if(a > 10)
+        //     alert('a比10大');
+        //     alert('这个和if判断无关'); //if语句只会控制紧随其后的一句代码（代码块）
+        
+        // if(a > 10){
+        //     alert('a比10大');
+        //     alert('这个和if判断无关');
+        // }
+
+        // 条件表达式不是布尔值，会自动转换为布尔值进行判断
+        // if(100){
+        //     alert('100转换为布尔值判断后执行')
+        // }
+        
+        let a = 10;
+        if(a === 10){
+            alert('a的值是10')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

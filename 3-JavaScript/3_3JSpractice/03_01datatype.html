@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type</title>
+    <script>
+        var num = 10; //num 数字型
+        var PI = 3.14 //PI 数字型
+        //八进制：在数字面前加0表示八进制
+        var num1 = 010;
+        console.log(num1); // 8   010转换为八进制为8
+        var num2 = 015;
+        console.log(num2); //13
+        //十六进制：0-9，A-F，a-f  在数字面前加0x表示十六进制
+        var num3 = 0xa
+        console.log(num3) // 10
+        var num4 = 0xF  
+        console.log(num4) //15
+        //数字型的最大和最小值
+        console.log(Number.MAX_VALUE) //1.7976931348623157e+308
+        console.log(Number.MIN_VALUE) //5e-324
+        //数字型的无穷大
+        console.log(Number.MIN_VALUE*2) //Infinity
+        //非数值
+        console.log('pink'-10)            //NaN
+        
+        //isNaN()   这个方法用来判断非数字，并且返回一个值，如果是数字，返回false，如果不是数字，返回true
+        console.log(isNaN(12))           // false
+        console.log(isNaN('hanbing'-12)) //true
+        console.log(isNaN('hanbing'+12)) //true
+        // 弹出网页警示框
+        alert('酷热难耐，火辣的太阳下，我挺拔的身姿，成为了最独特的风景。\n这一刻，我豪气冲天，终于大喊一声：“收破烂啦~”')
+        //如果用+号会拼接
+        console.log('pink'+10)            //pink10
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

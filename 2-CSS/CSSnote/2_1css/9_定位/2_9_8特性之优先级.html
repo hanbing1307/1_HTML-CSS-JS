@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* （0，0，0，1 */
+        body{
+            color: red;
+        }
+        /* （0，0，0，1） */
+        div{
+            color: yellow;
+        }
+        /* (0,0,0,1) */
+        body{
+            color: blue;
+        }
+        /* (0,0,2,0) */
+        .abc{
+            color: green;
+        }
+        /* .box .abc{
+            color: green;
+        } */
+        /* (0,1,0,0) */
+        #first{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        三、特性之优先级
+        - 特性：不同选择器具有不同的优先级，优先级高的选择器样式会覆盖优先级低选择器的样式
+        - 优先级公式：
+            · 继承 < 通配符选择器 < 标签选择器 < 类选择器 < id选择器 < 行内样式 < !important
+        - 注意：
+            · !important写在属性值的后面，分号的前面
+            · !important不能提升继承的优先级，只要是继承，优先级最低
+            · 实际开发中不建议使用!important
+     -->
+     <div class="abc">这是第一段测试优先级的文字</div>
+     <div class="box" id="first" style="color: brown;">
+         这是第一段测试优先级的文字
+     </div>
+     <!-- 
+         权重叠加计算
+         - 场景：如果时复合选择器，此时需要通过权重叠加计算方法，判断最终哪个选择器优先级最高会生效
+         - 权重叠加计算公式：（每一级之间不存在进位）
+            (行内，id，类，标签)逐个对比数量，上一级出结果则无需继续对比
+
+      -->
+</body>
+</html>

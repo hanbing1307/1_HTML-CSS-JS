@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        四、表格标签
+     -->
+     <!-- 
+        4.1、表格的基本标签
+        1、应用场景:在网页中以行+列的单元格的方式整齐展示和数据，如：学生成绩表
+        2、基本标签:
+            标签名      说明
+            table       表格整体，可用于包裹多个tr
+            tr          表格每行，可用于包裹td
+            td          表格单元格，可用于包裹内容
+        3、注意点:
+            · 标签的嵌套关系:table > tr > td
+      -->
+    <!-- 
+        4.2、表格基本属性
+        1、应用场景:设置表格基本展示效果
+        2、常见相关属性：
+            属性名    属性值    效果
+            border    数字    边框
+            width     数字    表格宽度
+            height    数字    表格高度
+        3、注意点:
+            · 实际开发时针对于样式效果推荐使用CSS设置
+     -->
+     <!-- 
+        4.3、表格标题和表头单元格标签
+        1、应用场景:在表格中表示整体大标题和一列小标题
+        2、其他标签:
+            标签名      名称        说明
+            caption     表格大标题  表示表格整体大标题，默认在表格整体顶部居中位置显示
+            th          表头单元格  表示一列小标题，通常用于表格第一行，默认内部文字加粗居中显示
+        3、注意点:
+            · caption标签书写在table标签内部
+            · th标签书写在tr标签内部（用于替换td标签）
+        -->
+    <!-- 
+        4.4、表格的结构标签
+        1、应用场景:让表格的内容结构分组，突出表格不同部分(头部、主体、底部)，使语义更加清晰
+        2、结构标签:
+            标签名      名称
+            thead       表格头部
+            tbody       表格主体
+            tfoot       表格底部
+        3、注意点:
+            · 表格结构标签内部用于包裹tr标签
+            · 表格的结构标签可以省略
+    -->
+    <!-- 
+        4.5、合并单元格:垂直（跨行合并）或水平合并（跨列合并）
+        1、步骤:
+            -1、明确合并哪几个单元格
+            -2、通过左上原则，确定保留谁删除谁
+                · 上下合并 ——> 只保留最上的，删除其他
+                · 左右合并 ——> 只保留最左的，删除其他
+            -3、给保留的单元格设置:跨行合并（rowspan）或者跨列合并（colspan）
+                rowspan:合并单元格的个数。跨行合并（垂直合并）
+                colspan:跨列合并（水平合并）
+        2、注意attention:
+                -只有同一个结构标签中的单元格才能合并（不能跨thead、tbody、tfoot）
+     -->
+     <table border="1" width="400" height="200">
+        <caption><strong>优秀学生信息表</strong></caption>
+        <thead>
+            <tr>
+                <th>年级</th>
+                <th>姓名</th>
+                <th>学号</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">高三</td>
+                <td>周杰伦</td>
+                <td>301</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>林俊杰</td>
+                <td>302</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>高二</td>
+                <td>蔡依林</td>
+                <td>201</td>
+                <td>99</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>评语</td>
+                <td colspan="3">大家都很棒</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

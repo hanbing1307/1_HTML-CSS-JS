@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格样式</title>
+    <style>
+        table{
+            width: 50%;
+            border: 1px solid black ;
+
+            /* 
+                border-spacing 边框间距
+            */
+            border-spacing: 0px;
+            /* 
+                border-collapse 设置边框的合并
+                    collapse 默认值 边框合并
+            */
+            border-collapse: collapse;
+        }
+
+        td{
+            border: 1px solid black;
+            height: 50px;
+            /* 默认情况下，元素在td中是垂直居中的，可以通过vertical-align修改 */
+            /* 向底部靠近 */
+            vertical-align: bottom;
+            /* 文本居中 */
+            text-align: center;
+        }
+
+        /* 设置隔行的颜色不同，用伪类 */
+        tr:nth-child(2n+1){
+            background-color: aqua;
+        }
+        tr:nth-child(2n){
+            background-color: skyblue;
+        }
+        /* 设置鼠标移动到哪行就变色，伪类 */
+        tr:hover{
+            background-color: red;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* 将盒子居中，用单元格的方法,不要用定位*/
+            display: table-cell;
+            vertical-align: middle;
+            
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: auto auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">dd</div>
+    </div>
+    <table>
+        <caption><strong>学生成绩单</strong></caption>
+        <tr> 
+            <td>姓名</th>
+            <td>成绩</th>
+            <td>评语</th>   
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>100</td>
+            <td>法外狂徒厉害</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>100</td>
+            <td>李四也不错</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>60</td>
+            <td>王五加油噢</td>
+        </tr>
+        
+        <td>总结</td>
+        <td colspan="2">全部及格</td>
+    </table>
+</body>
+</html>

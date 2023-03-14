@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else语句</title>
+    <script>
+        /* 
+            if else语句
+            - 语法
+                if(条件表达式){
+                    语句
+                }else{
+                    语句
+                }
+            - 执行流程：
+                if-else执行时，先对条件表达式进行求值判断，
+                    如果结果为true，则执行if后的语句
+                    如果结果为false，则执行else后的语句
+        */
+        // let age = 50
+        // if(age >= 60){
+        //     alert('你可以退休了。')
+        // }else{
+        //     alert('你还不能退休。')
+        // }
+        /* 
+            if- else if-else语句
+            - 语法：
+                if(条件表达式){
+                    语句
+                }else if(条件表达式){
+                    语句
+                }else if(条件表达式){
+                    语句
+                }else if(条件表达式){
+                    语句
+                }else(条件表达式){
+                    语句
+                }
+            - 执行流程：
+                if- else if-else语句,会自上向下依次对if后的条件表达式进行求值判断
+                    如果条件表达式结果为true，则执行当前if后的语句，执行完毕语句结束
+                    如果条件表达式结果为false，则继续向下判断，直到找到true为止
+                    如果所有的条件表达式都是false，则执行else后的语句
+            - 注意：
+                if-else if-else语句中只会有一个代码块被执行，
+                    一旦有执行的代码块，下边的条件都不会继续判断，需要非常注意条件的编写顺序
+        */
+        // let grades = 93;
+        // if(grades == 100){
+        //     alert('恭喜你满分！')
+        // }else if(grades >= 90 && grades < 100){
+        //     alert('恭喜你成绩非常优秀')
+        // }else if(grades >= 75 && grades < 90){
+        //     alert('恭喜你成绩优秀')
+        // }else if(grades >= 60 && grades < 75){
+        //     alert('同学继续保持')
+        // }else{
+        //     alert('同学请继续加油噢')
+        // }
+        
+        /* 
+            练习1 practices one：编写一个程序，获取用户输入的整数，然后通过程序显示这个整数是奇数还是偶数。
+         */
+        // 获取用户输入的数字
+        // let num = +prompt("请输入一个整数"); 
+        let num = parseInt(prompt("请输入一个整数"));  // 避免用户输入小数，取整
+
+        // 验证用户的输入法是否合法，只有是有效数字时，我们才检查它是否是偶数
+        // 我们不能用== 或 === 来检查一个值是否是NaN
+        // 可以使用isNaN()函数来检查一个值是否是NaN
+        if (isNaN(num)){    // 还可以这样 if（isNaN(num) || num % 1 !== 0)
+            alert('你的输入有问题，请继续输入')
+        }else{
+            if(num % 2 === 0){
+                alert(`${num}是偶数！`) // ` `  反单引号模板字符串可以嵌套变量
+            }else{
+                alert(`${num}是奇数！`)
+            }
+        }
+
+         /* 
+            练习2 practices two：从键盘输入小明的期末成绩：
+                当成绩为100时，"奖励一台iphone"
+                当成绩为[80-99]时，"奖励一张游乐园票"
+                当成绩为[60-79]时，"奖励看一场电影"
+                当成绩为60以下时，"惩罚五三一本"
+         */
+        let grades = +prompt('小明，请输入你的期末成绩');
+        // 检查成绩是否合法
+        if(isNaN(grades) || grades < 0 || grades > 100){
+            alert('请输入一个合法的分数')
+        }else{
+            if(grades === 100){
+                alert('奖励一台iphone')
+            }else if(grades >= 80 && grades < 100){
+                alert('奖励一张游乐园票')
+            }else if(grades >= 60 && grades < 80){
+                alert('奖励看一场电影')
+            }else{
+                alert('惩罚五三一本')
+            }
+        }
+         /* 
+            练习3 practices three：
+                男大当婚，女大当嫁。有一位女生家长提出这样的要求：
+                    高：180cm以上；富：1000万以上；帅：500以上
+                    如果三个条件同时满足，则："我一定要嫁给他"
+                    如果这三个条件有为真的情况，则："嫁吧，比上不足，比下有余"
+                    如果都不满足，则"不嫁！"
+         */
+        let height = +prompt('请输入你的身高(厘米):')
+        let money = +prompt('请输入你的财富（万）:')
+        let face = +prompt('请输入你的研制(像素):')
+
+        if(height > 180 && money > 1000 && face > 500){
+            alert('我一定要嫁给他')
+        }else if(height > 180 || money > 1000 || face > 500){
+            alert('嫁吧，比上不足，比下有余')
+        }else{
+            alert('不嫁')
+        }
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

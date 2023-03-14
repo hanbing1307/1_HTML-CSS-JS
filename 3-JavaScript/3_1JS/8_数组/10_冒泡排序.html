@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+    <script>
+        /* 
+            升序排序 数组 [9, 1, 3, 2, 4, 8, 7, 6, 5, 0]
+
+            思路一：
+                比较相邻的两个元素，然后根据大小来决定是否交换它们的位置
+                - 这种叫冒泡排序，是最慢的排序方式，不适合用于数据多的排序
+        */
+        const arr = [9, 1, 3, 2, 4, 8, 7, 6, 5, 0]
+        for(let j = 0; j < arr.length - 1; j++){
+            for(let i = 0; i < arr.length; i++){
+                // arr[i]前面的元素 arr[i + 1]后面的元素
+                if(arr[i] > arr[i + 1]){
+                    // 大数在前，小数在后，交换位置
+                    let temp = arr[i]  // 临时变量用来存储arr[i]的值
+                    arr[i] = arr[i + 1] // 将arr[i + 1]的值赋值给arr[i]
+                    arr[i + 1] = temp  // 将temp的值赋值给arr[i +1]
+                    // 小数在前，大数在后，不交换位置
+                }
+            }
+        }
+        console.log(arr)
+
+        // 优化
+        const arr2 = [9, 1, 3, 2, 4, 8, 7, 6, 5, 0]
+        for(let j = 0; j < arr.length - 1; j++){
+            for(let i = 0; i < arr.length - 1 - j; i++){
+                // arr[i]前面的元素 arr[i + 1]后面的元素
+                if(arr[i] > arr[i + 1]){
+                    // 大数在前，小数在后，交换位置
+                    let temp = arr[i]  // 临时变量用来存储arr[i]的值
+                    arr[i] = arr[i + 1] // 将arr[i + 1]的值赋值给arr[i]
+                    arr[i + 1] = temp  // 将temp的值赋值给arr[i +1]
+                    // 小数在前，大数在后，不交换位置
+                }
+            }
+        }
+        console.log(arr2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

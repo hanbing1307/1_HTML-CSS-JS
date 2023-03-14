@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组Array方法介绍 P92、93</title>
+    <script>
+        /* 
+            MDN地址：
+                https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
+            
+            Array.isArray()
+                - 检查一个对象是否是数组
+                - 如果参数是数组则返回 true ，否则返回 false 
+            at()
+                - at() 方法接收一个整数值并返回该索引对应的元素，允许正数和负数。负整数从数组中的最后一个元素开始倒数。
+            concat()
+                - 用来连接两个或多个数组
+                - 非破坏性方法，不会破坏原数组，而是返回一个新的数组
+        */
+        const obj = {name:"孙悟空", age: 18}
+        console.log(Array.isArray(obj))  // false
+
+        const obj2 = [1, 2, 3, 4, 5]
+        console.log(Array.isArray(obj2)) // true
+
+        const arr = ["孙悟空", "猪八戒", "唐僧", "沙悟净"]
+        console.log(arr.at(0)) // 孙悟空
+        console.log(arr.at(3)) // 沙悟净
+        console.log(arr.at(-1)) // 沙悟净
+
+        let result = arr.concat(obj2)
+        console.log(result) // "孙悟空", "猪八戒", "唐僧", "沙悟净",1,2,3,4,5
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

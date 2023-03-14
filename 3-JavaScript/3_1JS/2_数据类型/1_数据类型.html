@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型 data type</title>
+</head>
+<body>
+    <!-- 
+        三、数据类型
+    -->
+    <!-- 
+        3.1数据类型简介
+            · 1、JS的变量数据类型：是程序在运行过程中，根据右边变量值的数据类型来确定的
+                                JS拥有动态类型，意味着相同的变量可以用作不同的类型
+            · 2、数据类型分类：
+                简单数据类型(基本数据类型)：
+                    简单数据类型    说明            默认值
+                    Number         数字型          0
+                    Boolean        布尔值类型      false
+                    String         字符串          ""
+                    Undefined      声明变量未赋值   undefined
+                    Null           声明变量为空值   null
+                    BigInt
+                引用数据类型：
+                    Object         对象
+
+                2.1数字型
+                ·2.1.1、数字型数据
+                    · 八进制：0-7   在程序里面数字前加0 表示八进制
+                .2.1.2、数字型范围：
+                    · JS中的最大值和最小值：
+                        alert(Number.MAX_VALUE);    1.7976931348623157e+308
+                        alert(Number.MIN_VALUE);    5e-324
+                        alert(NaN);                 NaN
+                    · 数字型的三个特殊值：无穷大、无穷小、非数值NaN
+                        console.log(Number.MIN_VALUE*2)   //Infinity
+                        console.log(-Number.MIN_VALUE*2)  //-Infinity
+                        console.log('pink'-10)            //NaN   (Not a number)
+                    · isNaN()   这个方法用来判断非数字，并且返回一个值，如果是数字，返回false，如果不是数字，返回true
+                        console.log(isNaN(12))           // false
+                        console.log(isNaN('hanbing'-12)) //true
+                        console.log(isNaN('hanbing'+12)) //true
+                2.2字符串
+                · 2.2.1、字符串型string
+                    · 引号中的任意文本都可以是字符串型，语法为双引号和单引号（常用）
+                    · 字符串嵌套：外双内单,外单内双
+                · 2.2.2、字符串转义
+                        转义符      说明
+                        \n          换行符，n是newline的意思
+                        \\          斜杠\
+                        \'          '单引号
+                        \"          "双引号
+                        \t          tab缩进
+                        \b          空格，b是blank的意思
+                · 2.2.3、字符串长度：用length可以获取
+                    var str = 'my name is andy';
+                    console.log(str.length);    //15
+                · 2.2.4、字符串拼接：用 + 号     数值相加，字符相连
+
+                2.3、boolean、undefined、null
+                    · bool布尔值：True、False    参与四则运算时，true当作1，false当作0
+                    · 如果一个变量声明未赋值，就是undefined 未定义数据类型
+                    · 一个声明变量给null值，里面存的值为空
+    -->
+    <!-- 
+        3.2、获取变量数据类型
+            3.2.1、获取检测变量的数据类型
+                · typeof 可用来获取检测变量的数据类型
+                · 通过浏览器的F12 颜色可以知道是什么类型   
+                    黑色为string、蓝色为number、偏紫色为boolean、灰色为undefined或者null
+            3.2.2、字面量
+                字面量就是表示如何表达这个值
+     -->
+     <!-- 
+         3.3、数据类型转换
+            3.3.1、转换为字符串
+                方式                说明         案例
+                toString()          转成字符串   var num = 1; alert(num.toString);
+                String()强制转换     转成字符串   var num = 1; alert(String（num);  
+                加号拼接字符串       和字符串拼接都是字符串    var num = 1; alert(num + '我是字符串')
+            3.3.2、转换为数字型（重点）
+                方式                说明                        案例
+                parseInt(string)    将string转成整数数值型      parselent('78') 
+                parseFloat(string)  将string转成浮点数数值型    parselent('78.21') 
+                Number()强制转换函数 将string转成数值型          Number('21') 
+                js隐式转换(- * /)    利用算数运算隐式转换为数值型 '12'-0
+            3.3.3、转换为布尔型
+                方式                说明                        案例
+                Boolean()函数       其他类型转换成布尔型         Boolean('true')
+                代表空、否定的值会被转换为false，如''、0、NaN、null、undefined
+                其余值会被转换成true
+      -->
+     
+</body>
+</html>

@@ -1,0 +1,25 @@
+/*
+    多行注释，会解析到css中
+*/
+body div {
+  color: red;
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
+body .box1 {
+  border: 10px solid red;
+}
+body .box3 {
+  border: 10px solid green;
+}
+.box1 {
+  width: 400px;
+}
+.box3 {
+  width: 400px;
+}
+.box2 {
+  width: 400px;
+  background-color: blueviolet;
+}

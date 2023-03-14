@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的复制</title>
+    <script>
+        /* 
+
+        */
+        const arr = ["孙悟空", "猪八戒", "唐僧", "沙悟净", "唐僧", "唐僧"]
+        // 如何复制一个对象
+        // 下面这种不叫复制，因为两个数组指向的是同一个内存地址，并没有新增一个数组
+        const arr2 = arr
+        console.log(arr)
+        console.log(arr2)
+
+        // 当调用slice方法时，会产生一个新对象，从而完成对对象的复制
+        const arr3 = arr.slice()
+        console.log(arr3)
+
+        console.log(arr2 === arr)  // true   (本质上指向同一个内存地址)
+        console.log(arr3 === arr)  // false  （浅拷贝）
+        console.log(arr3 == arr)  // false  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>算数运算符</title>
+    <script>
+                /* 
+            运算符（操作符）：
+                - 运算符可以用来对一个或者多个操作数（值）进行运算
+                - 分类：算术运算符、递增和递减运算符、比较运算符、逻辑运算符、赋值运算符
+
+                -算术运算符：
+                    + 加法运算符
+                    - 减法运算符
+                    * 乘法运算符
+                    / 乘法运算符
+                    % 取余数（取模）
+                    ** 幂运算
+                
+                注意：
+                    - 算术运算时，除了字符串的假发，其他运算的操作数时非数值时，都会转换成数值然后再运算
+                    - 浮点数：计算机在浮点数一定会有误差，不能直接拿浮点数来比较是否相等
+              
+        */
+       let a = 1 + 1; // 2
+       a = 1 - 1; // 0
+       a = 2 * 3; // 6
+       a = 10 / 5; // 2
+       a = 10 % 3; // 1
+       a = 10 % 2; // 0
+       a = 2 ** 3; // 8
+       a = 9 ** 0.5; // 3 (开方)
+
+       /* 
+            JS是一门弱类型语言，当进行运算时会通过自动的类型转换来完成运算
+       */
+       a = 10 - '5'; // 5
+       a = 10 + true; // 11(true转换为1)
+       a = 10 + false; // 10(false转换为0)
+       a = 10 + null ; // 10(null转换为0)
+       a = 5 - undefined; // NaN
+
+       /* 
+            当任意一个值和字符串做加法运算时，它会先将其他值转换为字符串，然后再做拼串的操作
+            这里面实际进行了一个隐式类型转换，可以利用这一特点进行类型转换
+                可以通过为任意类型 + 一个空串的形式来将其转换为字符串
+                其原理和String()函数相同，但使用起来更加简洁
+       */
+        a = 'hello,' + 'world'; // hello,world
+        a = '1' + 2; // 12
+
+        console.log(a);
+        
+        b = true; // boolean true
+        b = true + ''; // string true
+        console.log(typeof b,b);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

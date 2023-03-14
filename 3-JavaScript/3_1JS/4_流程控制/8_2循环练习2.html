@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环练习2 求水仙花数</title>
+    <script>
+       /*  
+            practices 2、求1000以内的水仙花数
+                - 水仙花数：
+                    一个n位数(n >= 3),如果它个位上数字的n次幂之和还等于这个数，那么这个数就是一个水仙花数
+                    举例：153 >百位数1,十位数5,个位数3 > 它们的立方相加等于153  >那么153就是水仙花数
+        */
+       
+        // 因为n大于等于3.所以水仙花数一定是3位数
+        // for(let i = 100; i < 1000; i++){
+
+        //     // 判断i是不是水仙花数
+        //     // 如果i的百位数、十位数、个位数的立方和还等于i，则i就是水仙花数
+        //     // 获取百位数
+        //     let bai = parseInt(i / 100)
+        //     // 获取十位数
+        //     let shi = parseInt((i - bai * 100) / 10)
+        //     // 获取个位数
+        //     let ge = i % 10
+
+        //     // 判断i是否是水仙花数
+        //     if(bai ** 3 + shi ** 3 + ge ** 3 === i){
+        //         console.log(i)   // 153,370,371,407
+        //     }
+        // }
+
+        // 方法2、利用字符串索引简化
+        for(let i = 100; i < 1000; i ++){
+            let strI = i + " "
+            if(strI[0] ** 3 + strI[1] ** 3 + strI[2] ** 3 === i){
+                console.log(i)  // 153,370,371,407
+            }
+            // console.log(strI[0], strI[1], strI[2])
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

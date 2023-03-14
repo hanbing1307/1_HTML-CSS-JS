@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换</title>
+    <script>
+        /* 
+            类型转换值将一种数据类型转换成其他类型
+                - 主要是转换成  字符串String 、 数字Number 、布尔 Boolean这三种
+             
+            1、转换为字符串(显式类型转换)   还有隐式类型转换后面学
+                方式                说明         案例
+                toString()          转成字符串   var num = 1; alert(num.toString);
+                    由于null和undefined没有toString()，所以对这俩调用toString()会报错
+
+                String()强制转换     转成字符串   var num = 1; alert(String（num);  
+                    原理：
+                        对于拥有toString()方法的值调用String()函数时，实际就是调用toString()方法
+                        对于null，则直接转换为"null",
+                        对于undefined，直接转换为"undefined"
+                加号拼接字符串       和字符串拼接都是字符串    var num = 1; alert(num + '我是字符串')
+
+            3、转换为布尔型
+                方式                说明                        案例
+                Boolean()函数       其他类型转换成布尔型         Boolean('true')
+                代表空、否定的值会被转换为false，如''、0、NaN、null、undefined
+                其余值会被转换成true
+        */
+
+    // toString 练习:
+       let a = 10; //"10"
+       a = true;  // "true"
+       a = 11n;  //"11"
+    //    a = null; //报错
+    //    a = Undefined; //报错
+       console.log(typeof a, a);
+
+       a.toString(); // 创建了字符串"10"，但是还没有赋值给a
+       a = a.toString(); // 这样赋值，类型才会转换
+       console.log(typeof a, a);
+
+    // String()练习：
+        let b = 15; // "15"
+        b = null;   // "null"
+        b = undefined; // "undefined"
+
+        console.log(typeof b, b);
+
+        b = String(b);
+        console.log(typeof b, b)
+
+    /* 
+        2、转换为数字型（重点）
+            方式                说明                        案例
+            parseInt(string)    将string转成整数数值型      parseInt('78') 
+            parseFloat(string)  将string转成浮点数数值型    parseInt('78.21') 
+            Number()强制转换函数 将string转成数值型          Number('21') 
+            js隐式转换(- * /)    利用算数运算隐式转换为数值型 '12'-0
+
+        
+            将其他的数据类型转换为数值
+                1、使用Number()函数来将其他类型转为数值
+                    转换情况：
+                        - 字符串：
+                            - 如果字符串是一个合法的数字，则会自动转换为对应的数字
+                            - 如果字符串不是合法数字，则转换为NaN
+                            - 如果字符串是空串或者纯空格的字符串，则转换为0
+                        - 布尔值：
+                            - true转换为1，false转换为0
+                        - null 转换为0
+                        - undefined 转换为NaN
+                2、专门用来将字符串转换为数值的两个方法：
+                        方式                说明                        案例
+                    parseInt(string)    将string转成整数数值型      parseInt('78') 
+                        - 解析时，会自左向右读取一个字符串，直到读取到字符串中所有的有效数字
+                        - 也可以使用parseInt()来对一个数字进行取整
+                    parseFloat(string)  将string转成浮点数数值型    parseFloat('78.21') 
+                        - 解析时，会自左向右读取一个字符串，直到读取到字符串中所有的有效数字
+    */
+    let c = '123'; // 123
+    c = 'abc'; // Nan
+    c = '3.1415926'; //3.1415926
+    c = '10px'; // Nan
+    c = ''; // 0
+    c = '  '; // 0
+    c = true; // 1
+    c = false; // 0
+    c = null; // 0
+    console.log(typeof c,c);
+
+    c = Number(c);  // 
+    console.log(typeof c,c);
+
+
+    let d = '123'; // 123
+    d = '456px'; // 456
+    d = '1a2b3c4'; // 1
+    d = 'z123d456'; // NaN
+    d = '12.34'; // 12
+
+
+    d = parseInt(d);
+    console.log(typeof d,d);
+
+    /* 
+        3、转换为布尔型
+            - 使用Boolean()函数来将其他类型转换为布尔值
+            -转换情况：
+                数字：
+                    - 0和NaN 转换为false
+                    - 其余数字转换为true
+                字符串：
+                    - 空串 转换为 false
+                    - 其余是 true
+                对象”
+                    - 对象都会转换为true（IE有特殊情况会转换为false，现在很少用IE，暂不考虑）
+                         
+                总结：
+                    所有代表空、否定的值会被转换为false，如''、0、NaN、null、undefined、false
+                    其余值会被转换成true
+    */
+
+    let f = 1; // true
+    f = 100; // true
+    f = -1; // true
+    f = 0; // false
+    f = 'abc'; // true
+    f = 'true'; // true
+    f = 'false'; //true
+    f = 'NaN'; // true
+    f = Infinity; // true
+    f = ''; // false
+    f = '  '; // false
+    f = null; // false
+    f = undefined; // false
+    f = false;  //false
+
+    f = Boolean(f);
+    console.log(typeof f,f);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.first{
+
+            color: red;
+            font-size: 30px;
+            height: 20px;
+        }
+        div.second{
+            color: red;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        CSS特性：继承性、层叠性、优先级
+     -->
+     <!-- 
+         一、继承性
+         - 特性：子元素有默认继承父元素样式的特点（子承父业）
+         - 可以继承的常见属性（文字控制属性都可以继承）：
+            · color
+            · font-style 、 font-weight 、 font-size 、 font-family
+            · text-indent 、 text-align
+            · line-height
+            ······
+        - 注意点：
+            · 可以通过调试工具判断样式是否可以继承
+        
+        - 继承失效的特殊情况
+            - 如果元素有浏览器默认样式，此时继承性依然存在，但是
+                · a标签的color会继承失效
+                · h系列标签的font-size会继承失效
+
+      -->
+      <div class="first">
+          这是div的文字
+          <span>
+              这是span的文字
+          </span>
+          <p>这是p的文字</p>
+          <a href="#">这是超链接</a> 
+          <h1>一级标题</h1>
+          <h2>二级标题</h2>
+          <p>dfsajd</p>
+          sdfscwe
+      </div>
+      <!-- 
+          二、层叠性
+          - 特性：
+            · 给同一个标签设置不同的样式 —— 此时样式会层叠叠加 —— 会共同作用在标签上
+            · 给同一个标签设置相同的样式 —— 此时样式会层叠覆盖 —— 显示最后执行的样式
+          - 注意：
+            · 当样式冲突时，只有当选择器优先级相同时，才能拖过层叠性判断结果
+       -->
+    <div class="second">
+        <p>这是测试层叠性的文字</p>
+    </div>
+
+    
+</body>
+</html>

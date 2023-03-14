@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W 3S导航条</title>
+    <!-- 清除浏览器默认样式 -->
+    <link rel="stylesheet" href="./CSS_reset.css">
+    <style>
+        .nav{
+            /* 设置导航条的宽高和背景颜色 */
+            width: 1210px;
+            height: 48px;
+            line-height: 48px;
+            background-color: #e8e7e3;
+            /* 设置外边距,让导航内容偏中间 */
+            margin: 100px auto;
+            /* flex布局 */
+            display: flex;
+        }
+        .nav li{
+            text-align: center;
+            flex-grow: 1;
+        }
+        .nav a{
+            /* 把a转换成块元素 */
+            display: block;
+            /* 去除超链接下划线 */
+            text-decoration: none;
+            /* 设置字体颜色 */
+            color: #777777;
+            /* 设置字体大小 */
+            font-size: 16px;
+            /* 设置左右内边距,用外边距会减少内容撑开的区域 */
+            padding:0 39px 0 39px;
+        }
+        /* 设置鼠标移入悬停时的状态颜色 */
+        .nav a:hover{
+            color:#fff;
+            background-color: #3f3f3f;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建导航条外部容器,类选择器命名为nav -->
+        <ul class="nav">
+            <li><a href="#">HTML/CSS</a></li>
+            <li><a href="#">Browser Side</a></li>
+            <li><a href="#">Server Side</a></li>
+            <li><a href="#">Programming</a></li>
+            <li><a href="#">XML</a></li>
+            <li><a href="#">Web Building</a></li>
+            <li><a href="#">Reference</a></li>
+        </ul>
+</body>
+</html>

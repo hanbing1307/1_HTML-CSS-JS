@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        // 创建对象
+        /*
+        var obj = new Object();  //创建了一个空对象
+        obj.uname = '张三丰';
+        obj.age = 18;
+        obj.sex = '男';
+        obj.sayHi = function() {
+                console.log('hi~');
+        }
+        */
+
+        //(1)我们是利用 等号= 赋值的方法，添加对象的属性和方法
+        //(2)每个属性和方法直接 用分号结束
+
+        /*
+        console.log(obj.uname); // 张三丰
+        console.log(obj.age); // 18
+        console.log(obj.sex); // 男
+        obj.sayHi(); // hi~
+        */
+
+        //利用构造函数创建对象练习
+        function Hero(name,type,blood,attack){
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(attack){
+                console.log(attack);
+            }
+        }
+        var lp = new Hero('廉颇', '力量型', 500,'近战');
+        var hy = new Hero('后羿', '射手型', 100,'远程');
+        lp.attack('近战');
+        hy.attack('远程');
+        console.log(lp);
+        console.log(hy);
+        
+
+        //遍历对象
+        for(var k in lp){
+            console.log(k); // k 变量 输出 得到的是属性名
+            console.log(lp[k]); // lp[k] 输出的是 属性值
+        }
+        // 练习  制作一个简单的计算器。写一个函数，实现翻转任意数组。 写一个函数，实现对数字数组的排序
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

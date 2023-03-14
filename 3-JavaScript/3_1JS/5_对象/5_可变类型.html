@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可变类型</title>
+    <script>
+        /* 
+            原始值都属于不可变类型，一旦创建就无法修改
+            在内存中不会创建重复的原始值
+            更改赋值在内存会创建新的地址，然后指向新的地址
+        */
+
+        let a = 10
+        let b = 10  // 指向同一个内存地址
+        a = 11 // 原始值：当我们对一个变量重新赋值时，绝对不影响其他变量
+
+        console.log("a =", a)
+        console.log("b =", b)
+
+        /* 
+            对象属于可变类型
+                - 对象创建完成后，可以任意添加删除修改对象中的属性
+                - 注意：
+                    - 当对两个对象进行相等或全等比较时，比较的时对象的内存地址
+                    - 如果有两个变量同时指向一个对象
+                        通过一个变量修改对象时，对另外一个变量也会产生影响
+        */
+        // let obj = {
+        //     name: "孙悟空"
+        // }
+        
+        let obj = Object()
+        obj.name = "孙悟空"
+        obj.age = 18
+
+        let obj2 = Object()
+        let obj3 = Object()
+        // let obj3 = obj2
+
+        console.log(obj2 === obj3) // false   比较的是内存地址，二者内存地址不一样
+        console.log(obj2 == obj3) // false
+        console.log(obj2 = obj3) // false
+        
+
+        let obj4 = obj
+        // console.log("obj",obj)
+        // console.log("obj",obj4)
+        // console.log(obj == obj4) // true 指向同一个内存地址，所以相等
+        // console.log(obj === obj4) // true
+
+        // 修改obj4的值,看看obj会不会发生变化
+        obj4.name = "猪八戒" // 当修改一个对象时，所有指向该对象的变量都会受到影响
+        console.log(obj)
+        console.log("obj4",obj)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-repeat</title>
+    <style>
+        body {
+            /* 背景图片 */
+            background-image: url("./background-image.png");
+            /* 不重复 */
+            background-repeat: no-repeat;
+            /* 背景图片位于右上角 */
+            background-position: right top;
+            margin-right: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        CSS background-repeat
+            默认情况下，background-image 属性在水平和垂直方向上都重复图像。
+            某些图像应只适合水平或垂直方向上重复，否则它们看起来会很奇怪。
+        提示：如需垂直重复图像，请设置 background-repeat: repeat-y;。
+        background-repeat 属性还可指定只显示一次背景图像：
+        background-position 属性用于指定背景图像的位置。
+     -->
+     <div>背景</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东右侧图片列表</title>
+    <!-- 引入清除默认样式的外部css -->
+    <link rel="stylesheet" href="../CSS Normalize.css">
+    <style>
+        /* 设置外部宽高，假设为宽190px和高470px */
+        /* 这个不需要，在这里只是对比列表中的背景颜色 */
+        body{
+            background-color: skyblue;
+        }
+        .img-list{
+            /* 设置宽度 */
+            width: 190px;
+            /* 设置高度 */
+            height: 470px;
+            /* 裁剪溢出的内容  溢出内容不会显示*/
+            overflow: hidden;
+            /* 将ul居中 偏下（实际不需要这么做） */
+            margin: 50px auto;
+            /* 设置背景颜色 */
+            background-color: #F4F4F4;
+        }
+        /* 设置li的下外边距 */
+        .img-list li{
+            margin-bottom: 9px;
+        }
+        /* 图片太大，设置图片 */
+        .img-list img{
+            /* 图片撑满了内容区content，设置为100%，宽高比例通常是确定的 */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 方法1 没有超链接 -->
+    <!-- <div >
+        
+        <img src="./京东图片1.jpg.avif" alt="">
+        <br>
+        <img src="./京东图片2.jpg.avif" alt="">
+        <br>
+        <img src="./京东图片3.jpg.avif" alt="">
+    </div> -->
+
+    <!-- 方法1 额外添加超链接 -->
+    <!-- <div>
+        <a href=""><img src="./京东图片1.jpg.avif" alt=""></a>
+        <br>
+        <a href=""><img src="./京东图片2.jpg.avif" alt=""></a>
+        <br>
+        <a href=""><img src="./京东图片3.jpg.avif" alt=""></a>
+    </div> -->
+
+    <!-- 方法2 -->
+    <ul class="img-list">
+        <li>
+            <a href=""><img src="./photos1.jpg.avif" alt=""></a>
+        </li>
+        <li>
+            <a href=""><img src="./photos2.jpg.avif" alt=""></a>
+        </li>
+        <li>
+            <a href=""><img src="./photos3.jpg.avif" alt=""></a>
+    </ul>
+</body>
+</html>

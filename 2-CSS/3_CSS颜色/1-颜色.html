@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色</title>
+    <style>
+        #a{
+            background-color: blue;
+        }
+        #b{
+            background-color: green;
+        }
+        #c{
+            background-color: red;
+        }
+        #d{
+            background-color: rgb(255, 123, 150);
+        }
+        #e{
+            background-color: #0008ee;
+        }
+        #f{
+            background-color: hsl(39, 100%, 50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        指定颜色是通过使用预定义的颜色名称，或 RGB、HEX、HSL、RGBA、HSLA 值。
+        CSS/HTML 支持 140 种标准颜色名。
+        
+        RGB 值
+            在 CSS 中，可以使用下面的公式将颜色指定为 RGB 值：
+            rgb(red, green, blue)
+            每个参数 (red、green 以及 blue) 定义了 0 到 255 之间的颜色强度。
+            例如，rgb(255, 0, 0) 显示为红色，因为红色设置为最大值（255），其他设置为 0。
+            要显示黑色，请将所有颜色参数设置为 0，如下所示：rgb(0, 0, 0)。
+            要显示白色，请将所有颜色参数设置为 255，如下所示：rgb(255, 255, 255)。
+
+        HEX 值
+            在 CSS 中，可以使用以下格式的十六进制值指定颜色：
+            #rrggbb
+            其中 rr（红色）、gg（绿色）和 bb（蓝色）是介于 00 和 ff 之间的十六进制值（与十进制 0-255 相同）。
+            例如，#ff0000 显示为红色，因为红色设置为最大值（ff），其他设置为最小值（00）。
+
+        HSL 值
+            在 CSS 中，可以使用色相、饱和度和明度（HSL）来指定颜色，格式如下：
+
+                hsla(hue, saturation, lightness)
+
+            色相（hue）是色轮上从 0 到 360 的度数。0 是红色，120 是绿色，240 是蓝色。
+            饱和度（saturation）是一个百分比值，0％ 表示灰色阴影，而 100％ 是全色。
+            亮度（lightness）也是百分比，0％ 是黑色，50％ 是既不明也不暗，100％是白色。
+        饱和度
+            饱和度可以描述为颜色的强度。
+            100％ 是纯色，没有灰色阴影
+            50％ 是 50％ 灰色，但是您仍然可以看到颜色。
+            0％ 是完全灰色，您无法再看到颜色。
+
+    -->
+    <div id="a">蓝色blue</div>
+    <br>
+    <div id="b">绿色green</div>
+    <br>
+    <div id="c">红色red</div>
+    <br>
+    <div id="d">RGB颜色</div>
+    <br>
+    <div id="e">HEX颜色</div>
+    <br>
+    <div id="f">HSL颜色</div>
+</body>
+</html>

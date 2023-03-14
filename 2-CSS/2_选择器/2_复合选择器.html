@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /* 
+            复合选择器：
+                - 交集选择器
+                    -作用：选中同时符合多个条件的元素
+                    -语法：选择器1.选择器2.选择器n{}
+                    -注意点：
+                        交集选择器中如果有元素选择器，必须使用元素选择器开头
+
+                - 并集选择器(选择器分组)
+                    -作用function：同时选择多个选择器对应的元素
+                    -语法grammar：选择器1，选择器2，选择器n{}
+        */
+
+        /* 将class为red的元素设置为红色（字体） */
+        .red{
+            color: red;
+        }
+        /* 将class为red的div字体大小设置为30px */
+        /* 
+            交集选择器：
+                -作用：选中同时符合多个条件的元素
+                -语法：选择器1.选择器2.选择器n{}
+                -注意点：
+                    交集选择器中如果有元素选择器，必须使用元素选择器开头
+        
+        */
+        div.red{
+            font-size: 30px;
+        }
+        .a.b.c{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">我是div</div>
+    <p class="red">我说P元素</div>
+    <p class="red2 a b c">我说P元素</div>
+    
+    <style>
+        /* 
+            选择器分组（并集选择器）：
+                -作用function：同时选择多个选择器对应的元素
+                -语法grammar：选择器1，选择器2，选择器n{}
+         */
+        
+        /* h3{
+            color: coral;
+        }
+        span{
+            color: coral;
+        } */
+        h3,span{
+            color: coral;
+        }
+    </style>
+    <h3>敕勒歌</h3>
+    <span>天苍苍，野茫茫</span>
+    <p>风吹草低见牛羊</p>
+</body>
+</html>

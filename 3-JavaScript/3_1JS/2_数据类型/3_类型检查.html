@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型检查typeof</title>
+    <script>
+        let a = 10;
+        let b = 10n;
+        console.log(a);
+        console.log(b);
+
+        // a + b; //会报错，不能直接相加
+
+    /* 
+        获取变量数据类型   通过typeof 运算符
+            获取检测变量的数据类型
+                - typeof 可用来获取检测变量的数据类型，它会根据不同的值返回不同的结果
+                - 通过浏览器的F12 颜色可以知道是什么类型   
+                    黑色为string、蓝色为number、偏紫色为boolean、灰色为undefined或者null
+            字面量
+                字面量就是表示如何表达这个值
+    */
+   console.log(typeof a);  // Number
+   console.log(typeof b);  //bigint
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

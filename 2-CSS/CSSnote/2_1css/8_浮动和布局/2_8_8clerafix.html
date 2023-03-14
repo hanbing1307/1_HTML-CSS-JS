@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearfix</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .box1::before{
+            /* content: '';
+            display: block;
+            display: inline-block; */
+            display: table;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            margin-top: 100px;
+        }
+
+        .clearfix::before,
+        .clearfix::after{
+            /* 添加空内容 */
+            content: '';
+            /* 解决外边距重叠问题 */
+            display: table;
+            /* 解决高度塌陷问题 */
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <div class="box2 "></div>
+    </div>
+</body>
+</html>

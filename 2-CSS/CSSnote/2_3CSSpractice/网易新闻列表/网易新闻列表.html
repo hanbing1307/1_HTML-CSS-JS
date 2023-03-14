@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="./CSS Normalize.css">
+
+    <style>
+        body{
+            background-color: greenyellow;
+        }
+        /* 统一去除所有超链接的下划线 */
+        a{
+            text-decoration: none;
+
+        }
+        /* 设置容器样式 */
+        .news-wrapper{
+            /* 设置宽高 （高度确定可以设置，如果变动就不要设置 */
+            width: 300px;
+            height: 324.340px;
+            /* 设置居中 */
+            margin:50px auto;
+            /* 设置背景颜色，显示轮廓 */
+            background-color: rgb(255, 255, 255);
+
+            /* 设置上边框 */
+            border-top: 1px solid #ddd;
+        }
+
+        /* 设置news-title样式 */
+        .news-title{
+            /* 为了边框和文字宽度一致，将h2转换为行内元素 */
+            display: inline-block;
+            /* 设置高度 */
+            height: 30px;
+            /* 设置上边框 红色 */
+            border-top: 1px solid red;
+            /* 红色上边框在整个容器的上边框下边，设置一个外边距向上一个像素 */
+            margin-top: -1px;
+            /* 设置文字偏中 */
+            padding-top: 10px;
+        }
+        
+        /* 设置标题超链接格式 */
+        .news-title a{
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置字体颜色 */
+            color: #404040;
+            /* 设置字体的加粗效果 */
+            font-weight: bold;
+            /* 设置字体大小 */
+            font-size: 16px;
+        }
+
+        /* 设置图片容器高度 */
+        .news-img{
+            height: 150px;
+        }
+
+        .news-img .img-title{
+            /* 文字在图片里，向上移动文字 */
+            margin-top: -30px;
+            /* 设置字体颜色 */
+            color: #fff;
+            /* 设置字体加粗 */
+            font-weight: bold;
+            /* 设置字体大小 */
+            font-size: 16px;
+            /* 设置文字偏中间，外边距 */
+            padding-left: 30px;      
+        }
+
+        /* 设置新闻列表样式 */
+        .news-list {
+            /* 设置外上边距 */
+            margin-top: 20px;
+            /* 设置左内边距padding */
+            /* padding-left: 14px; */
+        }
+        .news-list li::before{
+            /* 设置项目符号 临时处理方法，后面有更好的 */
+            content: '◽';
+            color: rbg(218, 218, 218);
+            font-size: 12px;
+            margin-right: 2px;
+        }
+        /* 设置li */
+        .news-list li{
+            /* 设置下外边距 */
+            margin-bottom: 8px;
+        }
+        /* 设置li中的文字 */
+        .news-list li a{
+            /* 设置字体大小 */
+            font-size: 14px;
+            /* 设置字体颜色 */
+            color: #666;
+        }
+        /* 设置鼠标移入时变成红色 */ 
+        .news-list li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建新闻列表外部容器 -->
+    <div class="news-wrapper">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <!-- 标题可以跳转到新的指定页面，用超链接 -->
+            <a href="#">军事</a> <i>.</i> <a href="#">航空</a>
+        </h2>
+
+        <!-- 创建一个图片的容器 -->
+        <div class="news-img">
+            <!-- 插入图片 -->
+            <img src="./photo_1.png" alt="">
+            <!-- 创建图片标题 -->
+            <h3 class="img-title">
+                土耳其近防炮 配备四根炮管
+            </h3>
+        </div>
+
+        <!-- 创建新闻列表 无序表格 -->
+            <ul class="news-list">
+                <li>
+                    <a href="#">海马斯火箭炮为啥难发现？因为真的小</a>
+                </li>
+
+                <li>
+                    <a href="#">美国福特号航母的卫生间脸盆是碳纤维做的</a>
+                </li>
+
+                <li>
+                    <a href="#">海鹰家族 军民俩用HW-620无人机 航展首秀</a>
+                </li>
+
+                <li>
+                    <a href="#">疑似炸弹威胁 一客机迫降德国帕德博恩机场</a>
+                </li>    
+            </ul>
+    </div>
+</body>
+</html>

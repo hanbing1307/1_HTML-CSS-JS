@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        图片标签：用于向当前页面引入一个外部图片
+        img标签：引入外部图片，img是一个自结束标签
+            属性：img元素输入替换元素（基于块和行内元素之间）
+        src属性：
+            指定的是外部图片的路径(路径规则和超链接一致)
+        alt属性：
+            对图片的描述（这个描述默认情况下不会显示，有些浏览器会在图片无法加载时显示）
+            搜索引擎会根据alt中的内容来识别图片。如果不写alt属性则图片不会被搜索引擎所收录
+        width：图片的宽度（单位：像素）
+        height：图片的高度
+                宽度和高度中如果只修改了一个，则另一个会等比例缩放
+            注意：
+                一般情况在pc端，不建议修改图片的大小
+        
+        图片格式：
+            jpeg(jpg):
+                -支持颜色比较丰富，不支持透明效果，不支持动图
+                -一般用来显示照片
+            gif：
+                -支持颜色较少，支持简单透明，支持动图
+                -颜色单一的图片，动图 
+            png：
+                -支持颜色丰富，支持复杂透明，不支持动图
+                -颜色丰富，复杂透明图片，(专为网页而生)
+            webp：
+                -谷歌新推出的专门用于表示网页中图片的一种格式
+                -具备其它图片格式的所有优点，而且文件特别小
+                -缺点：兼容性不好
+            
+            base64：
+                -将图片使用base64进行编码。可以将图片转换为字符，通过字符的形式来引入图片
+                -一般都是一些需要和网页一起加载的图片才会使用base64
+
+            效果一样，用内存小的
+            效果不一样，用效果好的
+     -->
+     <img src="../photo/01yusnshen.jpg" alt="原神" >
+
+     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.deyi.com%2Fforum%2F202109%2F30%2F1559552b3056a59c6ab33c.jpg&refer=http%3A%2F%2Fimg.deyi.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651679955&t=426f96e24f5a533fe505a8dd000b33d8" >
+     <img width = 500 height = 500 src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.deyi.com%2Fforum%2F202109%2F30%2F1559552b3056a59c6ab33c.jpg&refer=http%3A%2F%2Fimg.deyi.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651679955&t=426f96e24f5a533fe505a8dd000b33d8" >
+   
+</body>
+</html>

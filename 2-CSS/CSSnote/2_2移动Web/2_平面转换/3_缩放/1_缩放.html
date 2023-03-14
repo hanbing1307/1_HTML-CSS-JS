@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            transition: all 2s;
+        }
+
+        img{
+            width: 200px;
+            transition: all 2s;
+        }
+
+        .box:hover img {
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        缩放：
+            使用scale改变元素的尺寸
+
+            语法：
+                transform:scale(X轴缩放倍数，y轴缩放倍数)
+            技巧：
+                一般情况下，只为scale设置一个值，表示X轴和Y轴等比例缩放
+                    transform:scale(缩放倍数)
+                    scale值大于一表示放大，小于一表示缩小
+     -->
+     <div class="box">
+        <img src="./cl.png" alt="">
+     </div>
+</body>
+</html>

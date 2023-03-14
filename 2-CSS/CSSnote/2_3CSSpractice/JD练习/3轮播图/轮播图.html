@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东轮播图</title>
+    <!-- 引入清除浏览器默认样式文件 -->
+    <link rel="stylesheet" href="../CSS Normalize.css">
+    <style>
+        .img-list{
+            /* 设置外部容器宽高 */
+            width: 590px;
+            height: 470px;
+            /* 居中 */
+            margin: 100px auto;
+
+            /* 开启相对定位，不脱离文档流，不影响下边元素 */
+            position:relative;
+        }
+        /* 设置li */
+        .img-list li{
+            /* 设置浮动，让所有图片都叠到一起 */
+            position: absolute;
+        }
+        /* 通过修改元素的层级来显示指定的图片 */
+        .img-list li:nth-child(1){
+            z-index: 1;
+        }
+
+        /* 设置导航点的样式 */
+        .pointer{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            z-index: 9999;
+            /* 设置导航点的位置 */
+        }
+        .pointer a{
+            /* 导航点浮动 */
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            /* 导航点设置外边距 */
+            margin-left: 4px;
+            /* 把导航点做成圆形 */
+            border-radius: 50%;
+            /* 导航点颜色有透明 */
+            background-color: rgba(255, 255, 255, 0.6);
+            background-clip: content-box;
+            border: 2px solid transparent;
+        }
+
+        .pointer a.active,
+        .pointer a:hover{
+            background-color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 创建轮播图的外部容器 -->
+    <ul class="img-list">
+        <!-- 轮播图可以跳转，用超链接 -->
+        <li><a href=""><img src="./轮播图1.jpg" alt=""></a></li>
+        <li><a href=""><img src="./轮播图2.jpg" alt=""></a></li>
+        <li><a href=""><img src="./轮播图3.jpg" alt=""></a></li>
+        <li><a href=""><img src="./轮播图4.jpg" alt=""></a></li>
+        <li><a href=""><img src="./轮播图5.jpg" alt=""></a></li>
+        <!--  添加轮播图下方的原点  -->
+        <div class="pointer">
+            <a class ="active" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </ul>
+</body>
+</html>

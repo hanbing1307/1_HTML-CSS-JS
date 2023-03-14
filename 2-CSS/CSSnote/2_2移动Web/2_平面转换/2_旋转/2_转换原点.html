@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换原点</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 20px;
+            background-color: aquamarine;
+            transition: all 0.5s;
+            /* 添加给标签本身，不要添加到hover */
+            transform-origin: left top;
+        }
+
+        .box:hover{
+            transform: rotate(180deg);
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        转换原点
+            语法：
+                transform-origin(原点水平位置 原点垂直位置)
+                默认圆点是盒子中心点
+            取值：
+                方位名词（left top tight bottom center）(常用)
+                像素单位数值
+                百分比（参照盒子自身尺寸计算）
+                
+     -->
+    <div class="box">
+
+    </div>
+</body>
+</html>

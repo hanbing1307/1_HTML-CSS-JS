@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平面转换简介</title>
+    <style>
+        .father{
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid red;
+        }
+
+        .son{
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+            /* 添加移动的时间 */
+            transition: all 0.5s;
+        }
+        /* 鼠标移入父元素，son改变位置 */
+        .father:hover .son {
+            /* transform: translate(50px, 100px); */
+            transform: translate(-50px, -100px);
+            /* 百分比：参考盒子自身尺寸计算结果 */
+            /* transform: translate(50%, 50%); */
+
+            /* 单独移动一个方向 */
+            transform: translateX(100px);
+            transform: translateY(100px);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        平面转换概念
+            目标：使用transform属性实现元素的位移（常用）、旋转、缩放（常用）等效果
+
+            1. 改变盒子在平面内的形态（位移、旋转、缩放）
+            2. 2D转换
+
+        平面转换属性：
+            transform:translate(水平移动距离, 垂直移动距离)
+            取值：正负值都可
+                像素单位数值
+                百分比（参照物为盒子自身尺寸）
+
+                注意： X轴正向为右，Y轴正向为下
+
+            技巧：
+                translate()如果只给一个值，表示X轴方向移动距离
+                单独设置某个方向的移动距离：translateX()  translateY()
+
+        位移 - 绝对定位居中
+     -->
+     <div class="father">
+        <div class="son"></div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体简写属性</title>
+    <style>
+        div{
+            border: 1px red solid;
+            line-height: 2;
+            /* 
+                font 可以设置字体相关的属性
+                    语法：
+                        font：字体大小/行高 字体族
+                        行高可以省略不写，默认值为1.333
+             */
+            /* font-size: 60px;
+            font-family: 'Times New Roman', Times, serif; */
+
+            /* 
+                font-weight 字体正常或者加粗 100 - 900 
+                    400、normal为正常，700、bold为加粗 
+                
+                font-style 字体样式风格
+                    normal 正常
+                    italic 斜体
+            */
+            font-weight: 700;
+
+            font: bold italic 50px/2 'Times New Roman', Times, serif;;
+        }
+    </style>
+</head>
+<body>
+    <div>今天天气不错 你好啊</div>
+</body>
+</html>

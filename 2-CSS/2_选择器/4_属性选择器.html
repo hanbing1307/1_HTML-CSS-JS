@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* 
+            [属性名] 选择含有指定属性的元素
+            [属性名 = 属性值] 选择含有指定属性和属性值的元素
+            [属性名 ^= 属性值] 选择含有指定属性且以指定属性值开头的元素
+            [属性名 $= 属性值] 选择含有指定属性且以指定属性值结尾的元素
+            [属性名 *= 属性值] 选择含有指定属性且含有某些属性值结尾的元素
+
+        */
+
+        /*  选择所有p元素 文字变成蓝色 */
+        /* p{
+            color: blue;
+        } */
+
+        /*  选择所有包含title元素，文字变成绿色 */
+        p[title]{
+            color: green;
+        }
+
+        /* 选择包含title属性，且属性值为abc的元素，颜色变成红色 */
+        p[title = abc]{
+            color: red;
+        }
+
+        /* 选择包含title属性,以指定属性值def结尾的元素，颜色变成黄色 */
+        p[title $= def]{
+            color: yellow
+        }
+
+        /* 选择包含title属性,以含有属性值abc结尾的元素，颜色变成黄色 */
+        p[title *= abc]{
+            color: rgb(0, 110, 255)
+        }
+
+    </style>
+</head>
+<body>
+    <p title="abc">回乡偶书</p>
+    <p title="abcdef">少小离家老大回</p>
+    <p title="hello">乡音无改鬓毛衰</p>
+    <p title="abc">儿童相见不相识</p>
+    <p title="abc">笑问客从何处来</p>
+    <p>秋水共长天一色</p>
+    <p>落霞与孤鹜齐飞</p>
+
+</body>
+</html>

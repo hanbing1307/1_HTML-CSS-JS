@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用选择器</title>
+    <style>
+        /* 选择器写的越详细，权重越高 */
+        /* 
+            常用选择器：元素选择器、id选择器、类选择器、通配选择器
+        */
+        /* 
+            practice：将所有段落设置为红色red;
+
+            元素选择器：
+                作用：根据标签名来选中指定的元素
+                语法：标签名{}
+                例子：p{}   h1{}   div{}
+        */
+        /* p{
+            color: red;
+        } */
+
+        /* 
+            id选择器:
+                作用：根据元素的id属性值选中一个元素
+                语法：#id属性值{}
+                例子：#box{}   #red{} 
+            注意attention: id不能重复
+        */
+        
+        /* #green{
+            color: green;    
+        } */
+    </style>
+</head>
+<body>
+    <h1>我是标题</h1>
+    <p>少小离家老大回</p>
+    <p>乡音无改鬓毛衰</p>
+    <p id="green"> 儿童相见不相识</p>
+    <p>笑问客从何处来</p>
+    <p>天苍苍，野茫茫</p>
+    <p>风吹草低见牛羊</p>
+
+    <!--  
+        类选择器：
+            作用：根据元素的class属性值选中一组元素
+            语法：.class属性值
+
+        class：是一个标签的属性，和id类似，不同的是可以重复使用
+            -可以通过class属性来为元素分组
+            -可以同时为一个元素指定多个class属性
+    -->
+    <style>
+            .blue{
+                color:blue;
+            }
+            .a{
+                font-size: 60px;
+            }
+    </style>
+
+    <h2>我是标题</h2>
+    <p>少小离家老大回</p>
+    <p>乡音无改鬓毛衰</p>
+    <p class="blue a"> 儿童相见不相识</p>
+    <p>笑问客从何处来</p>
+    <p class="blue">天苍苍，野茫茫</p>
+    <p>风吹草低见牛羊</p>
+
+    <!-- 
+        通配选择器
+            -作用：选中页面中所有元素
+            -语法：*
+     -->
+   <style>
+       *{
+           color: brown;
+       }
+   </style>
+
+
+    <style>
+    /* 
+        常用选择器总结：10种
+            - 常用选择器：通配符选择器、标签选择器、类选择器、id选择器、属性选择器、并集选择器、后代选择器、子代选择器、兄弟选择器、伪选择器、
+    */
+    </style>
+</body>
+</html>

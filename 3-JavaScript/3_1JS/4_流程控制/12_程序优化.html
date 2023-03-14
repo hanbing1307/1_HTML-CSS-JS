@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改质数</title>
+    <script>
+
+    // 测试下面程序运行的时间
+    // 开始一个计时器
+    // console.time('质数练习')
+    // for(let i = 2; i < 100; i++){
+    //     // 检查i是否是质数
+    //     // 创建一个变量，记录i的状态，默认i是质数
+    //     let flag = true
+    //     for(let j = 2; j < i; j++){
+    //         if(i % j === 0)
+    //             // 进入判断，说明i不是质数，修改flag为false
+    //             flag = false
+    //     }
+    //     // 判断结果
+    //     if(flag){
+    //         //console.log(i)  // 这个最费时，且无关程序逻辑，测试可以忽略这个环节
+    //     }
+    // }
+    // //停止计时器
+    // console.timeEnd('质数练习')
+
+    // 当变量少的时候，运行速度快，但变量多的时候，运行速度慢，如何优化？
+    /* 
+        变量为100个数时：0.45ms
+        10000：268.17ms
+        100000：24066ms
+        优化后100000个数：2.52ms
+    */
+
+    // console.time('质数练习')
+    // for(let i = 2; i < 100000; i++){
+        
+    //     let flag = true
+    //     for(let j = 2; j < i; j++){
+    //         if(i % j === 0)
+                
+    //             flag = false
+    //             // 添加一个break终止循环
+    //             break
+    //     }
+    //     if(flag){
+    //         //console.log(i)  // 这个最费时，且无关程序逻辑，测试可以忽略这个环节
+    //     }
+    // }
+    // //停止计时器
+    // console.timeEnd('质数练习')
+
+    
+    /* 
+        问题：如何修改代码，提升其性能。
+            逻辑算法如何优化，依旧以上面的质数为例
+        - 性能优化一般都在内层循环中
+    */
+    /* 
+        10000个数：0.6ms
+        1000000个数：6.35ms
+        继续优化（去除偶数）1000000耗时：3.8ms
+    */
+    console.time('质数练习')
+    for(let i = 2; i < 1000000; i++){
+        
+        let flag = true
+        for(let j = 2; j <= i ** .5; j++){
+            if(i % j === 0)
+                
+                flag = false
+                // 添加一个break终止循环
+                break
+        }
+        if(flag){
+            // console.log(i)  // 这个最费时，且无关程序逻辑，测试可以忽略这个环节
+        }
+    }
+    //停止计时器
+    console.timeEnd('质数练习')
+
+    console.time('质数练习')
+    for(let i = 3; i < 1000000; i+=2){
+        
+        let flag = true
+        for(let j = 2; j <= i ** .5; j++){
+            if(i % j === 0)
+                
+                flag = false
+                // 添加一个break终止循环
+                break
+        }
+        if(flag){
+            // console.log(i)  // 这个最费时，且无关程序逻辑，测试可以忽略这个环节
+        }
+    }
+    //停止计时器
+    console.timeEnd('质数练习')
+
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

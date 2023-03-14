@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>逻辑运算符（布尔运算符）</title>
+    <script>
+     /* 
+        逻辑运算符（布尔运算符）
+            - 概念：逻辑运算符是用来进行布尔值运算的运算符，返回值也是布尔值，后面开发中经常用于多个条件的判断
+                逻辑运算符      说明                案例
+                    &&      "逻辑与"，简称"与"and   true && false    一假为假
+                    ||      "逻辑或"，简称"或"or    true || false    一真为真
+                    !       "逻辑非"，简称"非"not   !true 
+        ！逻辑非：
+            - ！可以用来对一个值进行非运算
+            - 它可以对一个布尔值进行取反操作
+                true -> false
+                false -> true
+            - 如果对一个非布尔值进行取反，它会将其转换为布尔值然后再取反
+                可以利用这个特点将其他类型转换为布尔值
+            - 类型转换：
+                转换为字符串：
+                    显示转换：
+                        String()
+                    隐式转换：
+                        + " "
+                转换为数值：
+                    显示转换：
+                        Number()
+                    隐式转换：
+                        +
+                转换为布尔值：
+                    显示转换：
+                        Boolean()
+                    隐式转换：
+                        ！！
+       */
+       let m = true;
+        m = !m; // false
+        console.log(m);
+
+        let o = 123;
+        // o = !o; // false
+        o = !!o; // true
+        console.log(o);
+
+        let p = NaN;
+        p = !p; // true
+        console.log(p);
+
+    /* 
+        逻辑运算符 -- 逻辑 与
+        && 逻辑与
+            - 可以对两个值进行与运算
+            - 当&&左右都为true时，返回true；否则返回false（一假为假）
+            - 与运算是找false，如果找到false，则返回false，没有false才返回true
+            - 对于非布尔值与运算，它会转换为布尔值然后运算
+                但是最终会返回原值
+                - 如果第一个值为false，则直接返回第一个值
+                    如果第一个值为true，则返回第二个值
+        || 逻辑或
+            - 可以对两个值进行或运算
+            - 当||左右有true时，返回true；否则返回false（一真为真）
+            - 与运算是找true，如果找到true，则返回true，没有true才返回false
+            - 对于非布尔值与运算，它会转换为布尔值然后运算
+                但是最终会返回原值
+                - 如果第一个值为true，则直接返回第一个值
+                    如果第一个值为false，则返回第二个值
+
+    */
+       let q = true && true; // true
+    //    q = true && false; // false
+    //    q = false && false; // false
+    //    q = true && alert("你好"); // 第一个为true，执行alert
+       q = 1 && 2; // 2
+       q = 1 && 0; // 0
+       q = 1 && 2 && NaN; // NaN
+    //    q = 0 && NaN; // 0
+       console.log(q);
+
+       let r = true || false; // true
+    //    r = true || false; // true
+    //    r = false || true; // true
+    //    r = true || true; // true
+    //    r = false || false; // false
+    //    r = false || alert("123"); // 执行alert
+       r = "hello" || alert("123"); // 执行hello 
+       r = NaN || null; // null
+       console.log(r);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

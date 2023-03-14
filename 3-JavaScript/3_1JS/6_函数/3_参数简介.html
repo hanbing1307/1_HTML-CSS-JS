@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的参数</title>
+    <script>
+        /* 
+            定义一个可以求任意两个值的函数
+        */
+        function sum(){
+            let a = Number(prompt('请输入一个数字'))
+            let b = Number(prompt('请再输入一个数字'))
+            console.log(a + b)
+        }
+        sum(1,2)
+        // // 箭头函数
+        // const sum2 = () => {
+        //     let a = Number(prompt('请输入一个数字'))
+        //     let b = Number(prompt('请再输入一个数字'))
+        //     console.log(a + b)
+        // }
+        // console.log(sum())
+        // console.log(typeof sum)
+
+        /* 
+            形式参数：
+                - 在定义函数时，可以在函数中指定数量不等的参数（形参）
+                - 在函数中定义形参，等于在函数内部声明了对应的变量但是没有赋值
+            实际参数：
+                - 在调用函数时，可以在函数的()传递下进行赋值
+                - 实参会赋值给其对应的形参
+                - 参数
+                    1.如果实参和形参数量相同，则对应的实参赋值给对应的形参
+                    2.如果实参多余形参，则多余的实参不会使用
+                    3.如果形参多余实参，则多余的形参为undefined
+                - 参数的类型
+                    JS不会检查参数的类型，可以传递任何类型的值作为参数
+            
+                1、函数声明
+                    function 函数名([参数]){
+                        语句
+                    }
+                
+                2、函数表达式
+                    const 变量 = function([参数]){
+                        语句
+                    }
+
+                3、箭头函数
+                    ([参数]) => {
+                        console.log("箭头函数")
+                    }
+                    只有一条语句的话，大括号可以省略
+        */
+        function fn(a, b){
+            console.log("a =", a) 
+            console.log("b =", b) 
+        }
+        fn(1, 10)
+        fn(1)
+        fn(true,"hello")
+        fn(1,2,3)
+        fn({name:'孙悟空'}, "hello")
+
+        /* 
+             定义一个可以求任意两个值的函数
+        */
+        function sum(a, b){
+            console.log(a + b)
+        }
+        sum(123, 159)
+        sum("hello", "world")
+    </script>
+<body>
+    
+</body>
+</html>

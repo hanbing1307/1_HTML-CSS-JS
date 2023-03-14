@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即执行函数</title>
+    <script>
+        /* 
+            在开发中要尽量减少直接在全局作用域中编写代码
+
+            所以我们的代码要尽量编写局部作用域
+        */
+
+        // 举例
+        // var a = 10
+        // var a = 20  // 这个时候会覆盖
+
+        // {
+        //     var a = 10
+        //     console.log(a)
+        // }
+
+        // {
+        //     var a = 20   // 这样还会覆盖，因为var没有块作用域
+        //     console.log(a)
+        // }
+        // console.log(a)
+        
+
+        // function fn(){
+        //     var a = 10
+        // }
+        // fn()
+        // function fn2(){
+        //     var a = 20   
+        // }
+        // fn2()
+        // 上面不会覆盖，但是还要给函数命名，也会有覆盖的问题，还要调用   那么我们希望能创建一个执行一次的匿名函数
+        
+        /* 
+            立即执行函数（IIFE）
+                - 立即是一个匿名函数，并且只会调用一次
+                - 可以利用IIFE来创建一个一次性的函数作用域，避免变量冲突的问题
+         */
+        (function(){
+            let a = 10
+            console.log(a)
+        }());
+
+        (function(){
+            let a = 20
+            console.log(a)
+        }());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

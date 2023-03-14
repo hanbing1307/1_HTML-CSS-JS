@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本</title>
+    <style>
+        div{
+            color: red;
+            color: green;
+            /* 
+                1、文本缩进
+                - 属性名：text-indent
+                - 取值：
+                    · 数字+px
+                    · 数字+em（推荐：1em = 当前标签的font-size的大小）
+                    ·      rem 相对于根元素的一个font-size 
+            */
+            text-indent: 2em;
+        }  
+
+        h1{
+            /* 
+            2、水平对齐方式
+            - 属性名：text-align
+            - 取值：
+                left      左对齐  默认值
+                center    居中对齐
+                right     右对齐
+                justify   两端对齐
+            - 注意：
+                如果要让文本水平对齐，text-align属性给文本所在标签（文本的父元素）设置
+
+            垂直对齐
+                vertical-align 设置元素垂直对齐的方式
+                    可选值：
+                        baseline 默认值 基线对齐
+                        top      顶部对齐
+                        middle   居中对齐
+            */
+            text-align: center;
+        }
+
+        h2{
+            width: 200px;
+            /* 
+            3、文本修饰
+            - 属性名：text-decoration
+            - 取值：
+                underline 下划线（常用）
+                line-through 删除线（不常用）
+                overline 上划线（几乎不用）
+                none 无装饰线（常用）
+            - 注意：
+                开发中会使用：text-decoration：none；清除a标签默认的下划线
+
+            网页处理空白
+                white-space 
+                    可选值
+                        normal 正常
+                        nowrap 不换行
+                        pre    保留空白
+            */
+            text-decoration: underline red dotted;
+            white-space: nowrap;
+            /* 裁剪溢出内容 */
+            overflow: hidden;
+            /* 多余文本省略号显示 */
+            text-overflow: ellipsis;
+        }
+
+        h3{
+            /* 
+             4、行高
+            - 作用：控制一行的上下行间距
+            - 属性名：line-height
+            - 取值：
+                数字+px
+                倍数（当前标签font-size的倍数）
+            - 应用：
+                让单行文本垂直居中可以设置line-height：文字父元素高度
+                网页精准布局时，会设置line-height：可以取消上下间距
+            - 行高与font连写的注意点：
+                如果同时设置了行高和font连写，注意覆盖问题
+                font：style weight size/line-height family;
+            */
+            line-height: 3;
+            border: 1px red solid;
+        }
+
+        h4{
+            text-decoration: overline;
+        }
+
+        h5{
+            text-decoration: none;
+        }    
+        /* 
+        5、拓展
+            - 颜色常见取值
+            - 属性名：
+                color 文字颜色
+                background-color 背景颜色
+            - 属性值：
+                关键词 预定义的颜色名 red、green······
+                rgb表示法 红绿蓝三原色（0-255）  rgb（0，0，0）
+                rgba表示法 红绿蓝三原色+a表示透明度（0-1）  rgba（255，255，255，0.5）  网页常用
+                十六进制表示法：#开头，将数字转换为十六进制表示  #000000、 #ff0000       网页常用
+
+            标签水平居中方法总结：margin：0 auto；
+                如果需要让div、p、h（大盒子）水平居中     可以通过margin：0 auto；实现
+                注意：
+                    如果需要让如果需要让div、p、h（大盒子）水平居中，直接给 当前元素本身 设置即可
+                    margin：0 auto； 一般针对于固定宽度的盒子，如果大盒子没有设置宽度，此时会默认占满父元素的宽度
+        */
+    </style>
+</head>
+<body>
+    <div>为了你，我变成狼人模样</div>
+    
+    <h1>我是测试文本居中的文字</h1>
+    <br>
+
+    <h2>我是测试文本下划线的文字</h2>
+    <br>
+
+    <h3>我是测试文本行高的文字</h3>
+    <br>
+
+    <h4>我是测试文本上划线的文字</h4>
+    <br>
+
+    <h5>我是测试文本无修饰线的文字</h5>
+</body>
+</html>

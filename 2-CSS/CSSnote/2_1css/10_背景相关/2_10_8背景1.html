@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景background</title>
+    <style>
+        .box1{
+            width: 400px;
+            height: 400px;
+             /* 
+            背景background
+                1.背景颜色
+                    background-color
+            */
+            background-color: aqua;
+            /*   
+            2.背景图片
+                background-image
+                    - 可以同时设置背景图片和背景颜色，这样背景颜色就会成为背景图片的背景色
+                    - 如果背景的图片小于元素，则背景图片会平铺铺满图片
+                    - 如果背景图片大于元素，则背景图片无法完全显示
+                    - 如果背景图片和元素一样大，则正常显示
+            */
+            background-image:url("./bgc.png") ;
+            /* 
+                background-repeat用来设置背景的重复方式
+                    可选值：
+                        repeat 默认值，背景会沿着XY轴双方向重复
+                        repeat-x 沿着X轴重复
+                        repeat-y 沿着Y轴重复
+                        no-repeat 背景图片不重复
+            */
+            background-repeat: no-repeat;
+            /* 
+                background-position 用来设置背景图片的位置
+                    设置方式
+                        通过top left bottom right center 几个方位的词来设置背景图片位置
+
+                        通过偏移量来指定背景图片的位置：
+                            水平方向的偏移量 垂直方向的偏移量
+            */
+            /* background-position: top center; */
+            background-position: 100px 100px;
+        }
+       
+        
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+     <!-- 
+        background: 背景颜色、图片、平铺、位置、相关属性连写
+     -->
+     <!-- 
+         1、背景颜色
+         - 属性名：background-color(bgc)
+         -属性值：
+            · 颜色取值：十六进制、rgba表示法、rgb表示法、关键字······
+        - 注意点：
+            · 背景颜色默认是透明：rgba（0，0，0，0）、transparent
+            · 背景颜色不会影响盒子大小，并且还能看清盒子的大小和位置，一般在布局中会习惯给盒子设置背景颜色，后面再除去或者更改
+        2、背景图片
+        - 属性名：background-image(bgi)
+        - 属性值：background-image：url（'图片的路径'）
+        - 注意：
+            · 背景图中url可以省略引号
+            · 背景图片默认是在水平和垂直方向平铺的
+            · 背景图片仅仅是指给盒子起到装饰效果，类似于背景颜色，不能撑开盒子的
+        3、背景平铺
+        - 属性名:background-repeat(bgr)
+        - 属性值：
+            · repeat:(默认值)水平和垂直方向都平铺
+            · no-repeat: 不平铺
+            · repeat-x:沿着水平方向（X轴）平铺
+            · repeat-y:沿着垂直方向（Y轴）平铺
+        4、背景位置
+        - 属性名：background-position(bgp)
+        - 属性值：background-position：水平方向位置 垂直方向位置
+            属性值：
+            · 方位名词（最多只能九个位置） 水平方向：left center right
+                                        垂直方向：top center bottom
+            · 数字+px（坐标）  坐标系：原点（0，0） （盒子的左上角）
+                                     X轴： 水平向右
+                                     Y轴： 垂直向下
+                             操作：将图片左上角与坐标重合即可
+        - 注意：
+            · 方位名词取值和坐标取值可以混合使用，第一个取值表示水平，
+            第二个表示垂直
+        5、背景相关属性连写
+        - 属性名：background（bg）
+        - 属性值：
+            · 单个属性值的合写，取值之间以空格隔开
+        - 书写顺序：
+            · background: color image repeat position(可以打乱顺序，但没必要。背景图位置如果是英文单词可以颠倒顺序)
+        - 省略问题：
+            · 可以按照需求省略
+            · 特殊情况：在PC端，如果盒子大小和背景图片大小一样，此时可以直接写background: url()
+        - 注意点：
+            · 如果需要设置单独的样式和连写
+            · 要么把单独的样式写在连写的下面
+            · 要么把单独的样式写在连写的里面
+        6、img标签和背景图片的区别
+        - 需求：需要在网页中展示一张图片的效果？
+            · 方法一：直接写上img标签即可   img标签是一个标签，不设置宽高默认会以原尺寸显示
+            · 方法二：div标签+背景图片
+                    · 需要设置div的宽高，因为背景图片只是装饰的css样式，不能撑开div标签
+      -->
+</body>
+</html>

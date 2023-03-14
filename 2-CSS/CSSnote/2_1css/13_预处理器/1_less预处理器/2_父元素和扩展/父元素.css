@@ -1,0 +1,56 @@
+.box1,
+.box5 {
+  width: 400px;
+  height: 400px;
+  background-color: aqua;
+}
+.box1 .box2 {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+}
+.box1 .box2 .box3 {
+  width: 200px;
+  height: 200px;
+  background-color: chartreuse;
+}
+.box1.hover {
+  background-color: orange;
+}
+.box5 {
+  border: 10px solid red;
+}
+.box6 {
+  width: 400px;
+  height: 400px;
+  background-color: aqua;
+}
+.box6 .box2 {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+}
+.box6 .box2 .box3 {
+  width: 200px;
+  height: 200px;
+  background-color: chartreuse;
+}
+.box6.hover {
+  background-color: orange;
+}
+.box8 {
+  width: 200px;
+  height: 200px;
+  background-color: chocolate;
+}
+div {
+  width: 200px;
+  height: 300px;
+  border: 2px solid red;
+}
+body {
+  background-color: skyblue;
+}
+body:hover {
+  background-color: #5bbce4;
+}

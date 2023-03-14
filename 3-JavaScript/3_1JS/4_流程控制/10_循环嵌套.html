@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环嵌套</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 120px;
+        }
+    </style>
+    <script>
+        /* 
+            循环嵌套：
+                在循环中也可以嵌套其他的循环
+                当循环发生嵌套时，外层循环每执行一次，内层循环就会执行一个完整的周期
+        */
+        /* 
+            举例： 希望在网页中打印出如下图形
+                    *****
+                    *****
+                    *****
+                    *****
+                    *****
+        */
+        // document.write('*****<br>')  非常麻烦，不符合实际生产情况
+        // document.write('*****<br>')
+        for(let i = 0; i < 5; i++){
+            document.write('*****<br>')
+        }
+        // 如果换成一行画更多星，上面这样的写法也不简洁，需要优化
+        for(let i = 0; i < 5; i++){
+            // 创建一个内层循环来控制图形的高度
+            for(let j = 0; j < 5; j++){
+                document.write('*&nbsp&nbsp')
+            }
+            document.write('<br>')
+        }
+        /* 
+            画出以下图形
+            *       j < 1   i = 0
+            **      j < 2   i = 1
+            ***     j < 3   i = 2
+            ****    j < 4   i = 3  
+            *****   j < 5   i = 4
+        */
+        for(let i = 0; i < 5; i++){
+            // 创建一个内层循环来控制图形的高度
+            for(let j = 0; j < i + 1; j++){
+                document.write('*&nbsp&nbsp')
+            }
+            document.write('<br>')
+        }
+        /* 
+            画出以下图形
+            *****   j < 5   i = 0
+            ****    j < 4   i = 1 
+            ***     j < 3   i = 2
+            **      j < 2   i = 3
+            *       j < 1   i = 4
+        */
+        for(let i = 0; i < 5; i++){
+            // 创建一个内层循环来控制图形的高度
+            for(let j = 0; j < 5 - i; j++){
+                document.write('*&nbsp&nbsp')
+            }
+            document.write('<br>')
+        }
+
+        // practices 1: 在网页中打印九九乘法表
+        // 外层循环控制高度
+        for(let i = 1; i < 10; i++){
+            // 内层循环控制宽度
+            for(let j = 1; j < i + 1; j++){
+
+                document.write(`<span>${j} * ${i} = ${i * j}</span>`)
+            }
+            document.write('<br>')
+        }
+
+        // practices 2:求100以内所有的质数
+        for(let i = 2; i < 100; i++){
+            // 检查i是否是质数
+            // 创建一个变量，记录i的状态，默认i是质数
+            let flag = true
+            for(let j = 2; j < i; j++){
+                if(i % j === 0)
+                    // 进入判断，说明i不是质数，修改flag为false
+                    flag = false
+            }
+            // 判断结果
+            if(flag){
+                console.log(i)
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

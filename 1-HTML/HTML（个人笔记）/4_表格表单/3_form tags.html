@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签 form tags</title>
+</head>
+<body>
+    <!-- 
+        Form tags(表单标签)：   
+            input系列标签:
+                -场景：在网页中显示收集用户信息的表单效果，如：登录页、注册页
+                -标签名：input
+                    input标签可以通过type属性值的不同，展示不同效果
+                
+            标签名  type属性值     说明
+            input   text        文本框，用于输入单行文本       
+                    password    密码框，输入密码
+                    radio       单选框，用于多选一
+                    checkbox    多选框，用于多选多
+                    file        文件选择，用于之后上传文件
+                    submit      提交按钮，用于提交
+                    reset       重置按钮，用于重置
+                    button      普通按钮，默认无功能，之后配合js添加功能
+
+            placeholder 占位符，提示用户输入内容的文本
+
+            单选框： 在网页中显示多选一的单选表单控件
+            type属性值：radio
+            常用属性：
+                -name：分组。有相同name属性值的单选框为一组，一组中同时只能由一个被选中
+                -checked：默认选中
+                注意： name属性对于单选框有分组功能。  
+            
+            文件选择：在网页中显示文件选择的表单控件
+            type属性值：file
+            常用属性：
+                -multiple：多文件选择
+
+            重置按钮：
+            type属性值：reset
+            常用属性：
+                - <form action="">
+            
+            button按钮标签:
+            标签名：button
+            type属性值：（同input的按钮系列）
+                -submit：提交按钮，点击之后提交数据给后端服务器
+                -reset：重置按钮，点击之后回复表单默认值
+                -button：普通功能，默认无功能，之后配合js添加功能
+            注意：
+                -谷歌浏览器中button默认是提交按钮
+                -button标签是双标签，更便于包裹其他内容：文字、图片等
+
+
+            
+            select下拉菜单标签:
+            textarea文本域标签:
+            label标签:
+     -->
+     <form action="">
+        用户名：<input type="text" placeholder="请输入手机号码/邮箱">
+        <br>
+        密码：<input type="password" placeholder="请输入密码">
+        <br>
+        性别: <input type="radio" name="sex"> 男 
+            <input type="radio" name="sex">女
+        <br>
+        多选框：<input type="checkbox">
+        <br>
+        上传文件：<input type="file">
+                    <input type="file" multiple>
+        <br>
+        提交按钮：<input type="submit" value="免费注册">
+        <br>
+        重置按钮：<input type="reset">
+        <br>
+        普通按钮：<input type="button" value="普通按钮">
+    </form>
+    <br>
+    <br>
+    <br>
+    <button>我是按钮</button>
+    <br>
+    <button type="submit">提交按钮</button>
+    <br>
+    <button type="input">重置按钮</button>
+    <br>
+    <button type="button">默认按钮</button>
+
+
+    <!-- 
+        select下拉菜单标签:
+            场景：在网页中提供多个选择项的下拉菜单表单控件
+            标签组成：
+                -select标签:下拉菜单的整体
+                -option:下拉菜单的每一项
+            常见属性：
+                -selected：下拉菜单的默认选中
+     -->
+     <select>
+         <option>北京</option>
+         <option selected>上海</option>
+         <option>广州</option>
+         <option>深圳</option>
+         <option>杭州</option>
+     </select>
+     <br>
+     <!-- 
+         textarea文本域标签:
+            场景：在网页中提供可输入多行文本的表单控件
+            标签名：textarea
+            常见属性：
+                -cols：规定了文本域内的可见宽度
+                -rows：规定了文本域内的可见行数
+            注意点：
+                -右下角可以拖拽改变大小
+                -实际开发时针对样式效果推荐CSS
+      -->
+       <textarea name="123" id="a" cols="30" rows="15"></textarea>
+       <br>
+      <!-- 
+          label标签:
+            场景：常用于绑定内容与表单标签的关系
+            标签名:label
+            使用方法1：
+                -使用label标签把内容（例如文本）包裹起来
+                -在表单标签添加id属性
+                -在label标签的for属性中设置对应的id属性值
+            使用方法2：
+                -直接使用label标签把内容（如：文本）和表单标签一起包裹起来
+                -需要把label标签的for属性删除即可
+       -->
+        性别：
+        <input type="radio" name="sex" id="nan"><label for="nan">男</label>
+        <label><input type="radio" name="sex">女</label>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语义化标签</title>
+</head>
+<body>
+    <!-- 
+        没有语义的布局标签:div和span
+        场景:实际开发网页时会大量频繁的使用到div和span这两个没有语义的布局标签
+        div:一行只显示一个（独占一行）
+        span:一行可以显示多个（行内元素）
+     -->
+     <div>这是div标签</div><div>这是div标签</div>
+     <span>这是span标签</span>  <span>这是span标签</span>
+     <br>
+     <!-- 
+         有语义的布局标签（了解）
+         场景:html5新增的,手机网页需要
+         标签：
+            - header:网页头部
+            - nav:网页导航
+            - footer:网页底部
+            - aside:网页侧边栏
+            - section:网页区块
+            - article:网页文章
+            - menu：目录
+        注意点:
+            以上标签显示特点和div一致，但是比div多了不同的语义
+        字符实体：空格：&nbsp；
+     -->
+
+     <header>这是网页头部</header>
+     <nav>这是网页导航</nav>
+     <aside>这是侧边栏</aside>
+     <section>这是网页区块</section>
+     <article>这是网页文章</article>
+     <div>这是div标签</div><div>这是div标签</div>
+      <span>这是span标签</span>&nbsp;&nbsp; <span>这是span标签</span>
+     <footer>这是网页底部</footer>  
+</body>
+</html>

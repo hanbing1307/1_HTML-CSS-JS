@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS命名方法</title>
+    <style>
+        /* 通常写法 */
+
+        /* 
+            .box{}
+            .box .item{}
+            .box .item .active{}
+         */
+
+        /* BEM 写法 */
+        /* 
+            .box{} 
+            .box_item{}
+            .box_item_active{} 
+        */
+
+
+    </style>
+</head>
+<body>
+    <!--  CSS命名
+
+        问题：
+            团队开发中css命名冲突
+            为CSS命名绞尽脑汁
+            Css的命名五花八门
+
+        解决方法：
+            使用规范：BEM
+                BEM是一种css命名规范
+                B：black（块），E：element（元素），M：modifier（修饰符）
+
+        eg：
+            .list_item_active{}
+            __ 双下划线：双下划线用来连接块和块的子元素
+            _  单下划线：用来描述一个块或者块的子元素的一种状态
+
+    -->
+    <!-- 实例 -->
+    <ul class="box">
+        <li class="box item active"> 光明</li>
+        <li class="box item">黑暗</li>
+    </ul>
+
+    <ul class="box">
+        <li class="box_item_active"> 光明</li>
+        <li class="box_item">黑暗</li>
+    </ul>
+</body>
+</html>

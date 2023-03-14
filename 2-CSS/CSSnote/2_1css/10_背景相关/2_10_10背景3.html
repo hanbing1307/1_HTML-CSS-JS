@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+         .box1{
+            width: 600px;
+            height: 600px;
+            background-color: yellow;
+            background-image: url(./bgc2.jpg);
+            
+            /* 
+                background-size 设置背景图片的大小
+                    第一个值表示宽度
+                    第二个值表示高度
+                        - 如果只写一个，则第二个值默认是auto
+                    cover 图片的比例不变，将元素铺满
+                    contain 图片比例不变，将图片在元素中完整显示
+            */
+            
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 100% auto;
+            padding: 10px;
+            background-size: cover;
+            overflow: scroll;
+            
+        }
+       
+        .box2{
+            width: 200px;
+            height: 1000px;
+            background-color: green;
+            background-image: url(./bgc.png);
+            background-repeat: no-repeat;
+            /* 
+                background-attachment 设置背景图片是否跟随元素移动
+                    可选值
+                        scroll 默认值 背景图片会跟随元素移动
+                        fixed   背景会固定在页面中，不会跟随元素移动
+            */
+            /* background-attachment: scroll; */
+            background-attachment: fixed;
+        }
+
+
+        /* 
+            总结：
+            background-color    背景颜色
+            background-image    背景图片
+            background-repeat   背景重复
+            background-position 背景偏移量 
+            background-size     背景大小
+            background-origin   相对于内容框来定位背景图像
+            background-clip     背景裁剪（规定背景的绘制区域）
+            background-attachment背景图片是跟随元素移动
+
+            background 简写属性
+                注意：
+                    background-size必须写在background-position的后边，并且使用/隔开
+                        background-position/background-size
+                    background-origin background-clip 两个样式，origin要在clip的前边
+
+        */
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

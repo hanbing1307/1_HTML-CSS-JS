@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习</title>
+    <script>
+        /*
+        检测获取字符串的长度length
+        var str = 'my name is andy';
+        console.log(str.length);  //15
+        */
+
+        /*弹出一个输入框（promot），让用户输入年龄（用户输入）
+        把用户输入的值用变量保存起来，把刚才输入的年龄与所要输出的字符串拼接（程序内部处理）
+        使用alert语句弹出警示框（输出结果）
+        */
+        /*
+        var age = prompt('请输入您的年龄');
+        var str = '您今年已经'+age+'岁了';
+        alert(str);
+        */
+
+        /*
+        var flag = true;    //flag布尔型
+        var flag1 = false;  //flag1布尔型
+        console.log(flag+1)  // 2 四则运算中，true当作1
+        console.log(flag1+1) // 1 四则运算中，false当作0
+        console.log(flag-1)  // 0 四则运算中，true当作1
+        console.log(flag1-1) // -1 四则运算中，false当作0
+        console.log(flag*2)  // 2 四则运算中，true当作1
+        console.log(flag1/2) // 0 四则运算中，false当作0
+        */
+
+        // 一个变量未声明，就是undefined，未定义数据类型
+        /*
+        var str;
+        console.log(str);      // undefined
+        var variable = undefined;
+        console.log(variable)    // undefined
+        console.log(variable + 1)  //NaN
+        console.log(variable + 'red')  //undefinedred
+         //null 空值
+         var space = null;
+         console.log(space + 'red')  // nullred
+         console.log(space + 1)      // 1
+         */
+
+        //typeof:用于检测数据类型
+        /*
+        var age = 10;
+        console.log(typeof(age)) // number  age为数字型
+
+        var color = 'blue';
+        console.log(typeof(color)) // string  color为字符串
+
+        var flag = true;
+        console.log(typeof(flag)) // boolean  flag为布尔型
+
+        var flag1 = undefined;
+        console.log(typeof(flag1)) // undefined  flag1为undefined
+
+        var flag2 = null;
+        console.log(typeof(flag2)) // object  flag2为object 对象
+        // prompt获取的数据时string 字符串型
+        var age = prompt('请输入您的年龄')
+        console.log(typeof(age))  //string  
+        */
+
+        //数据类型转换
+        /*
+        var num = 1;
+        var str = num.toString();
+        console.log(str);        // 1
+        console.log(typeof str); // string
+
+        console.log(String(num)); //1
+
+        console.log(num + '');
+        */
+
+        //var age = prompt('请输入你的年龄')
+        //console.log(typeof(age))  //string
+        //console.log(parseInt(age))  // 18
+        console.log(parseInt(18.25))  // 18
+        console.log(parseInt('100px'))  // 100
+        console.log(parseInt('red100px'))  // NaN
+        console.log(parseFloat('15.26'))  //15.26
+
+        console.log(Number('14')) //14
+
+        console.log('12'-0) //12
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

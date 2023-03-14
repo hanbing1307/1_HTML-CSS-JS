@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双开门案例</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .car1{
+            width: 1336px;
+            height: 600px;
+            margin: 0 auto;
+            background: url('./car1.jpg');
+            /* 超出内容要隐藏 */
+            overflow: hidden;
+        }
+        /* 左右相同的样式 */
+        /* 伪元素：行内显示模式，宽高不起作用 */
+        .car1::before,
+        .car1::after {
+            float: left;
+            content: '';
+            width: 50%;
+            height: 100%;
+            background-image: url('./car2.jpg');
+            transition: all 0.5s;
+            
+
+        }
+
+        /* 单独控制after的背景图位置 */
+        .car1::after{
+            background-position: right 0;
+        }
+
+        /* 鼠标移入car1，before向左边移动 */
+        .car1:hover::before{
+            transform: translate(-100%);
+        }
+
+        /* 鼠标移入car1，after向右边移动 */
+        .car1:hover::after{
+            transform: translate(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="car1"></div>
+
+    
+</body>
+</html>

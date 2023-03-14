@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /* 
+            伪类选择器（不存在的类，特殊的类）：
+                - 伪类用来描述一个元素的特殊状态
+                    比如：第一个子元素、被点击的元素、鼠标移入的元素等等
+                - 伪类一般情况下都是使用:开头
+                    比如：  :first-child 第一个子元素
+                            :last-child 最后一个子元素
+                            :nth-child() 选中第N个子元素
+                                特殊值：
+                                    n 表示第n个 n的范围0到正无穷
+                                    2n 或even 表示选中偶数位的元素
+                                    2n+1 或odd 表示选中奇数位的元素
+                            以上这些伪类都是根据所有的子元素进行排序
+                        :first-child 
+                        :last-child 
+                        :nth-child() 
+                            这几个伪类的功能和上述的类似，不同点是这三个只在同类型元素进行排序
+
+                        ::before        表示元素起始的位置
+                        ::after         表示元素结束的位置
+                            before和after 必须结合content使用
+                    - :not() 否定伪类
+
+        */
+
+
+        /* 将所有ul里面的li文字设置成红色 */
+        /* ul > li {
+            color: red;
+        } */
+
+        /* 将ul里第一个li文字设置成蓝色 */
+        /* ul > li.first{
+            color: blue;
+        } */
+
+        /* 注意，如果后面在原有第一个之前再添加内容，就无法自动将ul里第一个li文字设置成蓝色
+        因此，使用伪类选择器*/
+        /* ul > li:first-child{
+            color: red
+        }
+        ul > li:last-child{
+            color: yellow;
+        }
+        ul > :nth-child(3){
+            color: pink;
+        }
+        ul > :nth-child(01){
+            color: pink;
+        } */
+
+        /* 否定伪类:not() */
+        ul > li:not(:nth-of-type(3)){
+            color: yellow;
+        }
+        p{
+            font-size: 30px;
+        }
+        
+        /* 首字放大（下沉） */
+        
+        p::first-letter{
+            font-size: 40px;
+        }
+        
+        /* 首行放大 */
+        /* p::first-line{
+            font-size: 40px;
+        } */
+
+        p::selection{
+            background-color: blue;
+        }
+
+        div::before{
+            content:'abc';
+            color: aqua;
+        }
+
+        div::after{
+            content:'efg';
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <span>新的第一个，测试:first-child和:nth-child(1)的不同</span>
+        <li>现在我才是第一个</li>
+        <li class="first">第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+    </ul>
+
+    <!-- 这个hello会自动有双引号，就是通过默认设置的::before 和::after 添加的 -->
+    <q>hello</q>
+    <div> 难念的经 </div>
+    <p>
+        参一生参不透这条难题
+        <br>
+        吞风吻雨葬落日未曾彷徨
+        <br>
+        欺山赶海践雪径也未绝望
+        <br>
+        拈花把酒偏折煞世人情狂
+    </p>
+        <!-- 
+        二、伪元素：一般页面中的非主体内容可以使用伪元素
+        1、目标：能够使用为元素在网页中创建内容
+        2、区别：
+            · 元素：HTML设置的标签
+            · 伪元素：由CSS模拟出的标签效果
+        3、种类：
+            伪元素          作用
+            ：：before      在父元素内容的最前添加一个伪元素
+            ：：after       在父元素内容的最后添加一个伪元素
+        4、注意点：
+            · 必须设置content属性才能生效
+            · 伪元素默认是行内元素
+     -->
+</body>
+</html>

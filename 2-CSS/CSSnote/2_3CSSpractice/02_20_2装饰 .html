@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>装饰vertical-align</title>
+    <style>
+        .father{
+            width: 500px;
+            height: 500px;
+            
+            background-color: pink;
+        }
+        img{
+            /* 浏览器把行内和行内块标签当作文字处理，默认基线对齐 */
+            /* vertical-align: middle; */
+
+            display: block;
+        } 
+    </style>
+</head>
+<body>
+    <div class="father">
+        <img src="../photo/01yusnshen.jpg" alt="">
+    </div>
+</body>
+</html>

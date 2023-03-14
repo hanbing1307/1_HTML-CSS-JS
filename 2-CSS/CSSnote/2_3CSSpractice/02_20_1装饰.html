@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浏览器遇到行内和行内块标签当作文字处理，默认文字时按照基线对齐 */
+        .one input{
+            height: 50px;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+        .two img{
+            vertical-align: bottom;
+        }
+        .father{
+            width: 400px;
+            height: 200px;
+            background-color: skyblue;
+            /* border: 1px solid black; */
+        }
+        /* middle和bottom不可用，未知什么原因 */
+        .father input{
+            vertical-align:top;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <input type="text"><input type="button" value="搜索">
+    </div>
+
+    <div class="two">
+        <img src="../photo/01yusnshen.jpg" alt=""><input type="text">
+    </div>
+    <br>
+    <div class="father">
+        <input type="text">
+    </div>
+</body>
+</html>

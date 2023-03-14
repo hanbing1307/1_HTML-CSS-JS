@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>
+    <style>
+        /* 视口宽度小于等于768px，网页背景是aqua色 */
+        @media (max-width:768px) {
+            body {
+                background-color: aqua;
+            }
+        }
+
+        /* 视口宽度大于等于1200px，网页背景色是粉色 */
+        @media (min-width:1200px) {
+            body {
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        响应式布局：
+            响应式布局是同一页面在不同的屏幕上有不同的布局，即只需要一套代码使页面适应不同的屏幕
+     -->
+
+    <!-- 
+        媒体查询
+            媒体查询指的就是根据不同的媒体类型（设备类型）和条件来区分各种设备（例如：电脑、手机、平板电脑、盲文设备等），并为它们分别定义不同的 CSS 样式。媒体查询能让 CSS 可以更精确的作用于不同的设备或同一设备的不同条件，让所有用户都能得到很好的用户体验。
+
+            开发常用写法
+                媒体特性常用写法
+                    max-width
+                    min-width
+
+                    @media(媒体特性) {
+                        选择器{
+                            样式
+                        }
+                    }
+
+            完整写法（了解）
+                @media 关键词 媒体类型 and (媒体特性) {CSS代码}
+
+                关键词：and only not
+                媒体类型：用来区分设备类型
+            
+            外链式CSS引入
+                    <link rel="stylesheet" media="逻辑符 媒体类型 and (媒体特性)" herf="xx.css">
+    -->
+
+</body>
+</html>

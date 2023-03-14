@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常量</title>
+    <script>
+        /* 
+            常量：不可变的变量就是常量
+            在JS中，使用const声明常量，并且声明常量用大写
+            在JS中，除了常规的常量外，有一些对象类型的数据我们也会声明为常量
+        */
+    //    let PI = 3.1415926;
+    //    PI = 10;
+    //    console.log(PI);  //这样声明的变量PI会变
+
+       const PI = 3.1415926;
+       PI = 10;   // 重复赋值会报错 Uncaught TypeError: Assignment to constant variable. 未捕获到的类型错误：分配给常量变量。
+       console.log(PI);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
