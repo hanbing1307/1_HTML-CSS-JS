@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity和rgba区别</title>
+    <style>
+        .demo1{
+            background-color:red;
+            opacity: 0.5;
+        }
+
+        .demo2{
+            background-color: rgba(125,125,125,0.7);
+        }
+
+        .demo3{
+            background-color: red;
+        }
+
+        .demo4{
+            background-color: rgba(125,125,125);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        共同性：实现透明效果
+        opacity：取值范围0 - 1之间，0表示完全透明，1表示不透明
+        rgba：r表示red红色，g表示green绿色，b表示blue蓝色，取值在0 - 255之间，a表示透明度，取值在0 - 1之间
+
+        区别：
+        opacity会继承父元素的opacity属性，而rgba的后代元素不会继承不透明属性
+     -->
+     <div class="demo1">
+        这是opacity测试内容
+        <div class="demo3">
+            这是opacity的子元素
+        </div>
+     </div>
+     <hr>
+     <div class="demo2">
+        这是rgba测试内容
+        <div class="demo4">
+            这是rgba的子元素
+        </div>
+     </div>
+</body>
+</html>
