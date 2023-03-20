@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双飞翼布局</title>
+    <style>
+        /* 清除浏览器默认内外边距 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .container > div{
+            /* 添加浮动 */
+            float: left;
+        }
+        .left{
+            width: 200px;
+            height: 100vh;
+            background-color: aqua;
+            margin-left: -100%;
+            
+        }
+        .center{
+            width: 100vw;
+            height: 100vh;
+            background-color: pink;
+        }
+        .right{
+            width: 200px;
+            height: 100vh;
+            background-color: blue;
+            margin-left: -200px;
+        }
+        .demo{
+            padding: 0 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        题目：写一个左中右布局占满屏幕，其中左、右俩块固定宽200，中间自适应宽，要求先加载中间块，请写出结构及样式
+        这个就是双飞翼布局
+     -->
+
+     <!-- 中间先加载，所以中间放前面 -->
+    <div class="container">
+        <div class="center">
+            <div class="demo">中</div>
+        </div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+    </div>
+     
+</body>
+</html>

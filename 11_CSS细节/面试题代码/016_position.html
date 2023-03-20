@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .demo1{
+            position: static;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .demo2{
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: #bfc;
+        }
+        .demo3{
+            position: relative;
+            top: 100px;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+        .demo4{
+            position: absolute;
+            top: 400px;
+            left: 400px;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+        .demo5{
+            position: sticky;
+            top: -100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+    position定位
+    取值范围：
+        static:默认值,代表没有定位
+
+        fixed:固定定位，相对于浏览器的创建进行定位，可以使用 top、right、bottom、left 这 4 个属性来定义元素相对于浏览器窗口的位置。使用固定定位的元素无论如何滚动浏览器窗口元素的位置都是固定不变的。
+        
+        relative:相对定位，即相对于自身定位，不脱离文档流，可以通过 top、right、bottom、left 这 4 个属性来设置元素相对于正常位置的偏移量，在此过程中不会对其它元素造成影响。
+
+        absolute:绝对定位，相对于第一个非 static 定位的父级元素进行定位，可以通过 top、right、bottom、left 这 4 个属性来设置元素相对于父级元素位置的偏移量。如果没有满足条件的父级元素，则会相对于浏览器窗口来进行定位。使用绝对定位的元素不会对其它元素造成影响。
+
+        sticky:粘性定位，它是 relative 和 fixed 的结合体，能够实线类似吸附的效果，当滚动页面时它的效果与 relative 相同，当要滚动到屏幕之外时则会自动变成 fixed 的效果。
+-->
+     <div class="demo1">
+        测试position:static,没有定位
+     </div>
+     <div class="demo2">
+        测试position:fixed，相对于浏览器定位
+     </div>
+     <div class="demo3">
+        测试position:relative，相对于自身定位
+     </div>
+     <div class="demo4">
+        测试position:absolute,绝对定位,相对于第一个非 static 定位的父级元素进行定位
+     </div>
+     <div class="demo5">
+        测试position:sticky
+     </div>
+</body>
+</html>

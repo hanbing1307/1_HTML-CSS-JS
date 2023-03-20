@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>display-none和visibility-hidden的区别</title>
+    <title>display:none和visibility:hidden的区别</title>
+    <style>
+        .demo1{
+            display: none;
+        }
+
+        .demo2{
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
     <!-- 
-        二者都是隐藏不显示元素
+        二者都是隐藏，不显示元素
         二者区别：
         1、占用位置的区别：
-            display:none不显示，且不会占用位置
-            visibility-hidden不显示，但是会占用位置
+            display:none隐藏元素，且不会占用位置
+            visibility-hidden隐藏元素，但是会占用位置
      -->
     <p >111</p>
-    <div style="display: none;">11111</div>
+    <div class="demo1">11111</div>
     <p>222</p>
 
     <p>bbb</p>
-    <div style="visibility: hidden;">bbbb</div>
+    <div class="demo2">bbbb</div>
     <p>cccc</p>
 </body>
 </html>

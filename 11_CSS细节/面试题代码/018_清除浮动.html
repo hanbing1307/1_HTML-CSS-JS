@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动方法</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+            border: 10px solid red;
+            /* 触发bfc模式 */
+            /* overflow: hidden; */
+        }
+        /* 第三种方法,现在常用 */
+        ul:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        /* 第二种方法，这种老方法现在基本不用 */
+        /* div{
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 
+        清除浮动方法
+        1、触发bfc
+        2、多创建一个格子，添加clear: both;现在基本不用
+        3、添加一个虚拟标签
+            ul:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+     -->
+     <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <!-- <div></div> -->
+     </ul>
+</body>
+</html>
